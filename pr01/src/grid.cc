@@ -28,4 +28,8 @@ bool Grid::IsValid(int row, int col) const {
   return true;
 }
 
+State Grid::GetState(const int row, const int col) {
+  return grid_[row][col];
+}
+
 #endif // GRID_CC

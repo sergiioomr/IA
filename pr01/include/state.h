@@ -18,7 +18,11 @@ struct State {
   State(const std::pair<int, int> &coord, int cost) : coord_(coord), cost_(cost) {} 
 
   std::pair<int, int> coord_;
+  std::pair<int, int> parent_coords;
   int cost_;
+  int f;
+  int g;
+  int h;
 };
 
 #endif //STATE_H
