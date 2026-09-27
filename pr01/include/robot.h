@@ -12,16 +12,17 @@
 #ifndef ROBOT_H
 #define ROBOT_H
 
+#include "../include/state.h"
 #include <utility>
 
 class Robot {
   public:
     Robot() {}
 
-    std::pair<int, int> MoveUp(const std::pair<int, int> &coords);
-    std::pair<int, int> MoveDown(const std::pair<int, int> &coords);
-    std::pair<int, int> MoveRight(const std::pair<int, int> &coords);
-    std::pair<int, int> MoveLeft(const std::pair<int, int> &coords);
+    std::pair<int, int> MoveUp(const State &state);
+    std::pair<int, int> MoveDown(const State &state);
+    std::pair<int, int> MoveRight(const State &state);
+    std::pair<int, int> MoveLeft(const State &state);
 };
 
 #endif //ROBOT_H

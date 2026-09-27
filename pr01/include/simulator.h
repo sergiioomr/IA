@@ -15,6 +15,7 @@
 #include "../include/grid.h"
 #include "../include/robot.h"
 #include "../include/state.h"
+#include <utility>
 #include <iostream>
 
 class Simulator {
@@ -25,7 +26,11 @@ class Simulator {
     int Heuristic(const State &state);
     int FunctionF(const int g, const int h);
     int FunctionG(const State &state);
+    int GetBestNode();
+    void Solution(const State &state);
+    bool InClosed(const std::pair<int, int> &coord);
 
+    void Algorithm();
 
   private:
 
@@ -33,11 +38,7 @@ class Simulator {
     Robot robot_;
     std::vector<State> open_;
     std::vector<State> closed_;
+    std::vector<State> solution_;
 };
 
 #endif // SIMULATOR_H
-
-// heuristic:       
-//    int dist_fil = std::abs(grid_.GetEnd().first - state.coord_.second)
-//    int dist_col = std::abs(grid_.GetEnd().second - state.coord_.first)
-// return 2 * (dist_fil + dist_col);

@@ -35,7 +35,9 @@ class Grid {
 		void SetEnd(const std::pair<int, int> &end) { end_ = end; }
 
 		bool IsValid(int row, int col) const;
-		State GetState(const int row, const int col);
+
+		// El método retorna una referencia, para poder modificar los atributos de los estados directamente desde el algoritmo
+		State& GetState(const int row, const int col);
 
 	private:
 		std::vector<std::vector<State>> grid_; // The grid
