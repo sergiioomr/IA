@@ -54,16 +54,44 @@ bool Simulator::InClosed(const std::pair<int, int> &coord) {
   return false;
 }
 
+bool Simulator::InOpen(const std::pair<int, int> &coord) {
+  for (size_t i = 0; i < open_.size(); i++) {
+    if (open_[i].coord_ == coord) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+void Simulator::UpdateOpen(const State &state) {
+  for (int i = 0; i < open_.size(); i++) {
+    if (open_[i].coord_ == state.coord_) {
+      open_[i].g = state.g;
+      open_[i].f = state.f;
+      open_[i].parent_coords = state.parent_coords;
+      break;
+    }
+  }
+}
+
+/**
+ * @brief That method run the main loop of the A* algorithm
+ * 
+ */
 void Simulator::Algorithm() {
-  // 1. Start at the initial state
+  // 1. Empezar en el estado inicial. Poner todos los parámetros de este nodo y añadir a abiertos.
   State &initial = grid_.GetState(grid_.GetStart().first, grid_.GetStart().second);
   initial.g = 0;
   initial.h = Heuristic(initial);
-  initial.f = initial.g + initial.h;
+  initial.f = FunctionF(initial.h, initial.g);
+
+  // El nodo inicial nunca tendrá un padre
+  initial.parent_coords = {-1, -1};
 
   open_.push_back(initial);
 
-  // 2. Add to the open vector the possible states
+  // 2. Empezar el bucle principal, mientras el vector de abiertos no quede vacío, estará ejecutándose, si llegase a terminar, significa que no existe un camino hasta el destino.
   while (!open_.empty()) {
     
     // Coger el nodo con menor f de la lista de nodos abiertos y eliminarlo de esta. Añadirlo a la de cerrados
@@ -86,38 +114,53 @@ void Simulator::Algorithm() {
       robot_.MoveDown(next_state)
     };
 
-    // Ahora, hay que evaluar cada uno de estos nuevos estados, si sus coordenadas son válidas, y si lo son, actualizar sus costes
+    // Evaluar estos nuevos estados
     for (int i = 0; i < 4; i++) {
-      // Si está fuera o es un obstáculo se ignora el estado
+      // Si no es válido se ingora
       if (!grid_.IsValid(possible_moves[i].first, possible_moves[i].second)) {
         continue;
       }
 
-      // Una vez vemos que esas coordenadas son válidas, obtenemos una referencia del estado real con esas coordenadas en el tablero, para poder hacer modificaciones sobre sus atributos
+      // Si las coordenadas son válidas, coger una referencia del estado en el tablero para poder modificarlo
       State& new_state = grid_.GetState(possible_moves[i].first, possible_moves[i].second);
       
-      // Si está en la lista de cerrados, es que ya se ha mirado, así que se ignora
+      // Si está en cerrados, se ignora
       if (InClosed(new_state.coord_)) {
         continue;
       }
 
-      // Sino, calculamos su función f
-      Heuristic(new_state);
-      FunctionG(new_state);
-      FunctionF(new_state.h, new_state.g);
+      // Actualizar el nodo padre para que los cálculos posteriores de la función g sean correctos. Almacenar el padre antiguo
+      std::pair<int, int> previous_parent = new_state.parent_coords;
+      new_state.parent_coords = next_state.coord_;
 
-      
+
+      // Comprobar si está en abiertos. Si lo está, y la nueva g es menor que la anterior, se sustituirá, sino se ignorará. 
+      if (InOpen(new_state.coord_)) {
+        int old_g = new_state.g;
+        int new_g = FunctionG(new_state);
+        
+        if (new_g < old_g) {
+          // Cambiar el valor de g y actualizar f
+          new_state.g = new_g;
+          new_state.f = FunctionF(new_state.g, new_state.h);  
+
+          // Estos datos se actualizan en el tablero, pero no en el vector de abiertos
+          UpdateOpen(new_state);
+        } else {
+          new_state.parent_coords = previous_parent;
+        } 
+      } else {
+      // Sino, la opción que queda es que sera un nodo nuevo, así que calculamos todos sus parámetros y se pone en abiertos
+        new_state.h = Heuristic(new_state);
+        new_state.g = FunctionG(new_state);
+        new_state.f = FunctionF(new_state.h, new_state.g);
+        new_state.parent_coords = next_state.coord_;
+
+        open_.push_back(new_state);
+      }
     }
-
-
-    State right = grid_.GetState(robot_.MoveRight(next_state).first, robot_.MoveRight(next_state).second);
-    State left = grid_.GetState(robot_.MoveLeft(next_state).first, robot_.MoveLeft(next_state).second);
-    State up = grid_.GetState(robot_.MoveUp(next_state).first, robot_.MoveUp(next_state).second);
-    State down = grid_.GetState(robot_.MoveDown(next_state).first, robot_.MoveDown(next_state).second);
-      
-    // Ahora, ya tengo las coordenadas de los 4 movimientos/caminos posibles, sin son válidas, las añadiré al vector de abiertos, sino, al de cerrados.
-
   }
-  // 3. Calculate the f function to make a decission
-  
+
+  // Si el bucle termina, es que no se encontró un camino
+  std::cout <<"No hay un camino posible" << std::endl;
 }

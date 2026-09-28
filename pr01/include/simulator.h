@@ -23,21 +23,36 @@ class Simulator {
     Simulator() {}
     Simulator(const Grid &grid, const Robot &robot) : grid_(grid), robot_(robot) {}
 
+    // Métodos para calcular las funciones h, g y f de los estados
     int Heuristic(const State &state);
     int FunctionF(const int g, const int h);
     int FunctionG(const State &state);
-    int GetBestNode();
-    void Solution(const State &state);
-    bool InClosed(const std::pair<int, int> &coord);
 
+    // Método que devolverá el índice del vector de abiertos en el que se encuentra el nodo con menor valor de la función f 
+    int GetBestNode();
+
+    // Métodos para comprobar si un nodo está ya en la lista de abiertos o cerrados.
+    bool InClosed(const std::pair<int, int> &coord);
+    bool InOpen(const std::pair<int, int> &coord);
+
+    // Este método actualiza el estado dentro de la lista de nodos abiertos cuando se modifican sus parámetros
+    void UpdateOpen(const State &state);
+
+    void Solution(const State &state);
+
+    // Algoritmo con el bucle principal
     void Algorithm();
 
   private:
 
     Grid grid_;
     Robot robot_;
+
+    // Vectores para almacenar los nodos abiertos y cerrados
     std::vector<State> open_;
     std::vector<State> closed_;
+
+    // Lista/vector que almacenará los nodos que pertenecen a la solución en orden 
     std::vector<State> solution_;
 };
 
