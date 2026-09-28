@@ -15,7 +15,9 @@
 
 
 struct State {
-  State(const std::pair<int, int> &coord, int cost) : coord_(coord), cost_(cost) {} 
+
+  State() = default;
+  State(const std::pair<int, int> &coord, int cost) : coord_(coord), cost_(cost), parent_coords() {} 
 
   std::pair<int, int> coord_;
   std::pair<int, int> parent_coords;

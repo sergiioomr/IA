@@ -21,8 +21,8 @@
 class Grid {
 	public:
 	// Constructors
-		Grid() : grid_{}, n_col_{}, n_row_{} {} // Default
-		Grid(const std::vector<std::vector<State>> &grid, const int n_col, const int n_row) : grid_(grid), n_col_(n_col), n_row_(n_row) {}
+		Grid() = default; // Default
+		Grid(const std::vector<std::vector<State>> &grid, const int n_col, const int n_row) : grid_(grid), n_row_(n_row), n_col_(n_col) {}
 		
 	// Getters
 		int GetNCol() const { return n_col_; }
@@ -41,8 +41,8 @@ class Grid {
 
 	private:
 		std::vector<std::vector<State>> grid_; // The grid
-		int n_col_;
 		int n_row_;
+		int n_col_;
 		std::pair<int, int> start_;
 		std::pair<int, int> end_;
 };

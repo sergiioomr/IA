@@ -23,6 +23,9 @@ class Simulator {
     Simulator() {}
     Simulator(const Grid &grid, const Robot &robot) : grid_(grid), robot_(robot) {}
 
+    // Getters
+    std::vector<State> GetSolution() const { return solution_; }
+
     // Métodos para calcular las funciones h, g y f de los estados
     int Heuristic(const State &state);
     int FunctionF(const int g, const int h);
@@ -41,7 +44,7 @@ class Simulator {
     void Solution(const State &state);
 
     // Algoritmo con el bucle principal
-    void Algorithm();
+    State Algorithm();
 
   private:
 

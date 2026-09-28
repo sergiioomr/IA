@@ -1,0 +1,3 @@
+/home/sergio/Uni/Tercero/IA/pr01/build/CMakeFiles/Busqueda_A.dir
+/home/sergio/Uni/Tercero/IA/pr01/build/CMakeFiles/edit_cache.dir
+/home/sergio/Uni/Tercero/IA/pr01/build/CMakeFiles/rebuild_cache.dir

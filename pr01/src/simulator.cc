@@ -79,7 +79,7 @@ void Simulator::UpdateOpen(const State &state) {
  * @brief That method run the main loop of the A* algorithm
  * 
  */
-void Simulator::Algorithm() {
+State Simulator::Algorithm() {
   // 1. Empezar en el estado inicial. Poner todos los parámetros de este nodo y añadir a abiertos.
   State &initial = grid_.GetState(grid_.GetStart().first, grid_.GetStart().second);
   initial.g = 0;
@@ -102,8 +102,7 @@ void Simulator::Algorithm() {
 
     // Comprobar si este nodo es el final
     if (next_state.coord_ == grid_.GetEnd()) {
-      Solution(next_state);
-      return;
+      return next_state;
     }
 
     // Sino es el objetivo, obtener los 4 posibles nuevos estados
@@ -163,4 +162,22 @@ void Simulator::Algorithm() {
 
   // Si el bucle termina, es que no se encontró un camino
   std::cout <<"No hay un camino posible" << std::endl;
+}
+
+void Simulator::Solution(const State &state) {
+  solution_.clear();
+
+  State current = state;
+
+  // Ahora, en bucle, ir viendo el padre de cada nodo hasta que este tenga coordenadas {-1, -1}
+  while (current.parent_coords != std::make_pair(-1, -1)) {
+     // Insertar por delante
+     solution_.insert(solution_.begin(), current);
+
+     // Mover el estado al padre
+     current = grid_.GetState(current.parent_coords.first, current.parent_coords.second);
+  }
+
+  // Insertar el primer nodo de la solución
+  solution_.insert(solution_.begin(), current);
 }
