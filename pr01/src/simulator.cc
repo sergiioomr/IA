@@ -93,12 +93,18 @@ void Simulator::Algorithm() {
         continue;
       }
 
+      // Una vez vemos que esas coordenadas son válidas, obtenemos una referencia del estado real con esas coordenadas en el tablero, para poder hacer modificaciones sobre sus atributos
       State& new_state = grid_.GetState(possible_moves[i].first, possible_moves[i].second);
       
       // Si está en la lista de cerrados, es que ya se ha mirado, así que se ignora
       if (InClosed(new_state.coord_)) {
         continue;
       }
+
+      // Sino, calculamos su función f
+      Heuristic(new_state);
+      FunctionG(new_state);
+      FunctionF(new_state.h, new_state.g);
 
       
     }
