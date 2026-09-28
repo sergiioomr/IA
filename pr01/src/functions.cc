@@ -71,6 +71,9 @@ void PrintSolution(Grid &grid, const std::vector<State> &solution) {
   int rows = grid.GetNRow();
   int cols = grid.GetNCol();
 
+  std::cout << "rows: " << rows << std::endl;
+  std::cout << "cols: " << cols << std::endl;
+  
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < cols; j++) {
       std::pair<int, int> position = {i, j};
@@ -87,10 +90,13 @@ void PrintSolution(Grid &grid, const std::vector<State> &solution) {
       if (is_solution) {
         std::cout << " * ";
       } else {
-        std::cout << " " << grid.GetState(position.first, position.second).cost_ << " " << std::endl;
+        std::cout << " " << grid.GetState(position.first, position.second).cost_ << " ";
       }
     }
-
+    std::cout << "Antes del salto de línea" << std::endl;
     std::cout << std::endl;
+    std::cout << "Después del salto de línea" << std::endl;
   }
+
+  std::cout << "Al acabar de imprimir todo" << std::endl;
 }

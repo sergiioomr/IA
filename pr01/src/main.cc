@@ -22,20 +22,29 @@ int main(int argc, char* argv[]) {
   // Ahora crear la matriz
   int rows, cols;
 
-  Grid grid(MakeGrid(filename, rows, cols), rows, cols);
+  std::vector<std::vector<State>> aux_grid = MakeGrid(filename, rows, cols);
+
+  Grid grid(aux_grid, rows, cols);
   Robot robot;
   Simulator simulator(grid, robot);
+  
+  std::vector<State> solution = {};
 
-  std::cout << "Ejecutando algoritmo A*..." << std::endl;
-  State final_state = simulator.Algorithm();
-  simulator.Solution(final_state);
-  std::vector<State> solution = simulator.GetSolution();
+  //std::cout << "Ejecutando algoritmo A*..." << std::endl;
+  //State final_state = simulator.Algorithm();
+  //simulator.Solution(final_state);
+  //std::vector<State> solution = simulator.GetSolution();
 
-
+  /*
   for (size_t i = 0; i < solution.size(); i++) {
     std::cout << "Elemento número " << i << " : (" << solution[i].coord_.first << ", " << solution[i].coord_.second << ")" << std::endl;
   }
+  */
 
-  
+  std::cout << "antes de imprimir matriz solución" << std::endl;
+  PrintSolution(grid, solution);
+
+  std::cout << "Después de imprimir matriz solución" << std::endl;
+
   return 0;
 }

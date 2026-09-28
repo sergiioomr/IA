@@ -91,14 +91,27 @@ State Simulator::Algorithm() {
 
   open_.push_back(initial);
 
+  std::cout << "Antes de entrar al bucle" << std::endl;
+  int contador = 0;
+
   // 2. Empezar el bucle principal, mientras el vector de abiertos no quede vacío, estará ejecutándose, si llegase a terminar, significa que no existe un camino hasta el destino.
   while (!open_.empty()) {
     
+    std::cout << "Iteración número: " << contador << std::endl;
+    contador++;
+
+    std::cout << "Antes de elegir el nodo con menor f" << std::endl;
     // Coger el nodo con menor f de la lista de nodos abiertos y eliminarlo de esta. Añadirlo a la de cerrados
     int index = GetBestNode();
+
+    std::cout << "Después de llamar a GetBestNode" << std::endl;
+
     State next_state = open_[index];
     open_.erase(open_.begin() + index);
     closed_.push_back(next_state);
+
+    std::cout << "Después de elegir el nodo con menor f" << std::endl;
+
 
     // Comprobar si este nodo es el final
     if (next_state.coord_ == grid_.GetEnd()) {
