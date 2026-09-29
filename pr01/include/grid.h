@@ -22,17 +22,14 @@ class Grid {
 	public:
 	// Constructors
 		Grid() = default; // Default
-		Grid(const std::vector<std::vector<State>> &grid, const int n_col, const int n_row) : grid_(grid), n_row_(n_row), n_col_(n_col) {}
+		Grid(const std::vector<std::vector<State>> &grid, int n_row, int n_col, const std::pair<int, int> &start, const std::pair<int, int> &end) 
+		: grid_(grid), n_row_(n_row), n_col_(n_col), start_(start), end_(end) {}
 		
 	// Getters
 		int GetNCol() const { return n_col_; }
 		int GetNRow() const { return n_row_; }
 		std::pair<int, int> GetStart() const { return start_; }
 		std::pair<int, int> GetEnd() const { return end_; }
-
-	// Setters
-		void SetStart(const std::pair<int, int> &start) { start_ = start; } 
-		void SetEnd(const std::pair<int, int> &end) { end_ = end; }
 
 		bool IsValid(int row, int col) const;
 

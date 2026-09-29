@@ -20,7 +20,7 @@
 #include <string>
 #include <sstream>
 
-std::vector<std::vector<State>> MakeGrid(const std::string &filename, int &rows, int &cols);
+Grid MakeGrid(const std::string &filename);
 
 void PrintSolution(Grid &grid, const std::vector<State> &solution);
 

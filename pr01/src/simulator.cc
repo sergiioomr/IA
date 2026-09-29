@@ -36,12 +36,14 @@ int Simulator::FunctionF(const int g, const int h) {
 int Simulator::GetBestNode() {
   int best_f = open_[0].cost_;
   int index = 0;
-  for (int i = 1; i < open_.size(); i++) {
+
+  for (size_t i = 0; i < open_.size(); i++) {
     if (open_[i].cost_ < best_f) {
       best_f = open_[i].cost_;
       index = i;
     }
   }
+  return index;
 }
 
 bool Simulator::InClosed(const std::pair<int, int> &coord) {
@@ -65,7 +67,7 @@ bool Simulator::InOpen(const std::pair<int, int> &coord) {
 }
 
 void Simulator::UpdateOpen(const State &state) {
-  for (int i = 0; i < open_.size(); i++) {
+    for (int i = 0; i < open_.size(); i++) {
     if (open_[i].coord_ == state.coord_) {
       open_[i].g = state.g;
       open_[i].f = state.f;
@@ -91,32 +93,23 @@ State Simulator::Algorithm() {
 
   open_.push_back(initial);
 
-  std::cout << "Antes de entrar al bucle" << std::endl;
+  //                                std::cout << "Antes de entrar al bucle" << std::endl;
   int contador = 0;
 
   // 2. Empezar el bucle principal, mientras el vector de abiertos no quede vacío, estará ejecutándose, si llegase a terminar, significa que no existe un camino hasta el destino.
   while (!open_.empty()) {
-    
-    std::cout << "Iteración número: " << contador << std::endl;
-    contador++;
-
-    std::cout << "Antes de elegir el nodo con menor f" << std::endl;
     // Coger el nodo con menor f de la lista de nodos abiertos y eliminarlo de esta. Añadirlo a la de cerrados
     int index = GetBestNode();
-
-    std::cout << "Después de llamar a GetBestNode" << std::endl;
 
     State next_state = open_[index];
     open_.erase(open_.begin() + index);
     closed_.push_back(next_state);
 
-    std::cout << "Después de elegir el nodo con menor f" << std::endl;
-
-
     // Comprobar si este nodo es el final
     if (next_state.coord_ == grid_.GetEnd()) {
       return next_state;
     }
+
 
     // Sino es el objetivo, obtener los 4 posibles nuevos estados
     std::vector<std::pair<int, int>> possible_moves = {

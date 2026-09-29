@@ -12,7 +12,7 @@
 
 #include "../include/functions.h"
 
-std::vector<std::vector<State>> MakeGrid(const std::string &filename, int &rows, int &cols) {
+Grid MakeGrid(const std::string &filename) {
   std::ifstream file(filename);
 
   if (!file.is_open()) {
@@ -21,6 +21,12 @@ std::vector<std::vector<State>> MakeGrid(const std::string &filename, int &rows,
   }
 
   std::vector<std::vector<State>> matrix;
+  int rows, cols;
+  std::pair<int, int> start, end;
+
+  // Contadores para asegurarme de que siempre haya un solo final y un solo inicio. 
+  int counter_end = 0;
+  int counter_start = 0;
   std::string line;
   int row_number = 0;
 
@@ -45,6 +51,16 @@ std::vector<std::vector<State>> MakeGrid(const std::string &filename, int &rows,
 
       row.push_back(state);
       col_number++;
+
+      if (coste == 0) {
+        start = state.coord_;
+        counter_start++;
+      }
+
+      if (coste == 10) {
+        end = state.coord_;
+        counter_end++;
+      }
     }
 
     // Ahora ya tenemos la primera fila añadida, así que la insertamos, comprobando antes que no esté vacía
@@ -64,15 +80,24 @@ std::vector<std::vector<State>> MakeGrid(const std::string &filename, int &rows,
     cols = 0;
   }
 
-  return matrix;
+  // Asegurar que haya un final y un inicio, exactamente uno.
+  if (counter_end != 1 ) {
+    std::cerr << "Error en el formato de la matriz de entrada. Debe haber exactamente una casilla de final, ni más ni menos." << std::endl;
+    exit(EXIT_FAILURE);
+  }
+
+  if (counter_start != 1) {
+    std::cerr << "Error en el formato de la matriz de entrada. Debe haber exactamente una casilla de inicio, ni más ni menos" << std::endl;
+  }
+
+  Grid grid(matrix, rows, cols, start, end);
+
+  return grid;
 }
 
 void PrintSolution(Grid &grid, const std::vector<State> &solution) {
   int rows = grid.GetNRow();
   int cols = grid.GetNCol();
-
-  std::cout << "rows: " << rows << std::endl;
-  std::cout << "cols: " << cols << std::endl;
   
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < cols; j++) {
@@ -93,10 +118,6 @@ void PrintSolution(Grid &grid, const std::vector<State> &solution) {
         std::cout << " " << grid.GetState(position.first, position.second).cost_ << " ";
       }
     }
-    std::cout << "Antes del salto de línea" << std::endl;
     std::cout << std::endl;
-    std::cout << "Después del salto de línea" << std::endl;
   }
-
-  std::cout << "Al acabar de imprimir todo" << std::endl;
 }
