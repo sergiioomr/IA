@@ -12,19 +12,24 @@
 #include "../include/simulator.h"
 
 int Simulator::FunctionG(const State &state) {
-  // If the actual state is the inicial state, it g cost is always 0
+  // El nodo inicial siempre tendrá g = 0
   if (state.coord_ == grid_.GetStart()) {
     return 0;
   }
   
-  // In other case
-  int cost = grid_.GetState(state.parent_coords.first, state.parent_coords.second).g;
-  return cost + state.cost_;  
+  int cost;
+  if (state.coord_ == grid_.GetEnd()) {
+    cost = 2;
+  } else {
+    cost = state.cost_;
+  }
+
+  return grid_.GetState(state.parent_coords.first, state.parent_coords.second).g + cost;
 }
 
 int Simulator::Heuristic(const State &state) {       
-  int dist_fil = std::abs(grid_.GetEnd().first - state.coord_.second);
-  int dist_col = std::abs(grid_.GetEnd().second - state.coord_.first);
+  int dist_fil = std::abs(grid_.GetEnd().first - state.coord_.first);
+  int dist_col = std::abs(grid_.GetEnd().second - state.coord_.second);
 
   return 2 * (dist_fil + dist_col);
 }
@@ -34,12 +39,10 @@ int Simulator::FunctionF(const int g, const int h) {
 }
 
 int Simulator::GetBestNode() {
-  int best_f = open_[0].cost_;
   int index = 0;
 
-  for (size_t i = 0; i < open_.size(); i++) {
-    if (open_[i].cost_ < best_f) {
-      best_f = open_[i].cost_;
+  for (size_t i = 1; i < open_.size(); i++) {
+    if (open_[i].f < open_[index].f) {
       index = i;
     }
   }
@@ -67,7 +70,7 @@ bool Simulator::InOpen(const std::pair<int, int> &coord) {
 }
 
 void Simulator::UpdateOpen(const State &state) {
-    for (int i = 0; i < open_.size(); i++) {
+    for (size_t i = 0; i < open_.size(); i++) {
     if (open_[i].coord_ == state.coord_) {
       open_[i].g = state.g;
       open_[i].f = state.f;
@@ -77,11 +80,51 @@ void Simulator::UpdateOpen(const State &state) {
   }
 }
 
+void Simulator::PrintIteration(int iter, std::ostream &out) const {
+  out << "Iteración " << iter << "\n-----------\n";
+
+  out << "Abiertos: = ";
+  for (size_t i = 0; i < open_.size(); i++) {
+    if (i > 0) {
+      out << ", "; 
+    }
+
+    out << "(" << open_[i].coord_.first + 1 << ", " << open_[i].coord_.second + 1 << ")";
+  }
+
+  out << std::endl;
+  out << "Cerrados = ";
+  for (size_t i = 0; i < closed_.size(); i++) {
+    if (i > 0){
+      out << " ";
+    }
+
+    out << "(" << closed_[i].coord_.first + 1 << ", " << open_[i].coord_.second + 1 << ")";
+  }
+
+  out << "\n------------------------\n";
+}
+
+void Simulator::PrintPath(const State &state, std::ostream &out) {
+  out << "Camino: ";
+  for (size_t i = 0; i < solution_.size(); i++) {
+    if (i > 0) {
+      out << " -> ";
+    }
+    out << "(" << solution_[i].coord_.first + 1 << ", " << solution_[i].coord_.second + 1 << ")";
+  }
+
+  // Imprimir el coste final del camino
+  out << "\nCoste: " << state.g << std::endl;
+}
+
+
+
 /**
  * @brief That method run the main loop of the A* algorithm
  * 
  */
-State Simulator::Algorithm() {
+State Simulator::Algorithm(std::ostream &file) {
   // 1. Empezar en el estado inicial. Poner todos los parámetros de este nodo y añadir a abiertos.
   State &initial = grid_.GetState(grid_.GetStart().first, grid_.GetStart().second);
   initial.g = 0;
@@ -91,13 +134,16 @@ State Simulator::Algorithm() {
   // El nodo inicial nunca tendrá un padre
   initial.parent_coords = {-1, -1};
 
+  int iteration = 0;
   open_.push_back(initial);
 
-  //                                std::cout << "Antes de entrar al bucle" << std::endl;
-  int contador = 0;
+  PrintIteration(iteration, std::cout);
+  PrintIteration(iteration, file);
 
   // 2. Empezar el bucle principal, mientras el vector de abiertos no quede vacío, estará ejecutándose, si llegase a terminar, significa que no existe un camino hasta el destino.
   while (!open_.empty()) {
+    iteration++;
+    
     // Coger el nodo con menor f de la lista de nodos abiertos y eliminarlo de esta. Añadirlo a la de cerrados
     int index = GetBestNode();
 
@@ -107,6 +153,9 @@ State Simulator::Algorithm() {
 
     // Comprobar si este nodo es el final
     if (next_state.coord_ == grid_.GetEnd()) {
+      PrintIteration(iteration, std::cout);
+      PrintIteration(iteration, file);
+      
       return next_state;
     }
 
@@ -164,13 +213,21 @@ State Simulator::Algorithm() {
         open_.push_back(new_state);
       }
     }
+
+    PrintIteration(iteration, std::cout);
+    PrintIteration(iteration, file);
   }
 
-  // Si el bucle termina, es que no se encontró un camino
+  // Si el bucle termina, es que no se encontró un camino. Se retornará un estado con coordenadas -2 para indicar en el main que no había solución
   std::cout <<"No hay un camino posible" << std::endl;
+  file << "No hay camino posibles" << std::endl;
+
+  State error;
+  error.coord_ = {-2, -2};
+  return error;
 }
 
-void Simulator::Solution(const State &state) {
+ void Simulator::Solution(const State &state) {
   solution_.clear();
 
   State current = state;

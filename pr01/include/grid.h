@@ -37,11 +37,11 @@ class Grid {
 		State& GetState(const int row, const int col);
 
 	private:
-		std::vector<std::vector<State>> grid_; // The grid
-		int n_row_;
-		int n_col_;
-		std::pair<int, int> start_;
-		std::pair<int, int> end_;
+		std::vector<std::vector<State>> grid_{}; // The grid
+		int n_row_ = 0;
+		int n_col_ = 0;
+		std::pair<int, int> start_{-1, -1};
+		std::pair<int, int> end_{-1, -1};
 };
 
 #endif // GRID_H

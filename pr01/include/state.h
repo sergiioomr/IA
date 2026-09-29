@@ -17,14 +17,14 @@
 struct State {
 
   State() = default;
-  State(const std::pair<int, int> &coord, int cost) : coord_(coord), cost_(cost), parent_coords() {} 
+  State(const std::pair<int, int> &coord, int cost) : coord_(coord), parent_coords(-1, -1), cost_(cost) {} 
 
-  std::pair<int, int> coord_;
-  std::pair<int, int> parent_coords;
-  int cost_;
-  int f;
-  int g;
-  int h;
+  std::pair<int, int> coord_{-1, -1};
+  std::pair<int, int> parent_coords{-1, -1};
+  int cost_ = 0;
+  int f = 0;
+  int g = 0;
+  int h = 0;
 };
 
 #endif //STATE_H

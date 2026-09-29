@@ -18,23 +18,29 @@
 int main(int argc, char* argv[]) {
   // Obtener el nombre del archivo
   std::string filename = argv[1];
+  std::string output_map = argv[2];
+  std::string output_trace = argv[3];
+
+  std::ofstream output(output_trace);
 
   // Ahora crear la matriz
-  int rows = 0;
-  int cols = 0;
-  int start = 0;
-  int end = 0;
-
   Grid grid = MakeGrid(filename);
   Robot robot;
   Simulator simulator(grid, robot);
   
-  State final_state = simulator.Algorithm();
+  State final_state = simulator.Algorithm(output);
+
+  // Comprobar si se encontró solución
+  if (final_state.coord_ == std::make_pair(-2, -2)) {
+    return 0;
+  }
 
   simulator.Solution(final_state);
+  simulator.PrintPath(final_state, output);
+  simulator.PrintPath(final_state, std::cout);
   std::vector<State> solution = simulator.GetSolution();
 
-  PrintSolution(grid, solution);
+  PrintSolution(grid, solution, output_map);
 
   return 0;
 }

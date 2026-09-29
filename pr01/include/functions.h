@@ -15,6 +15,7 @@
 
 #include "../include/grid.h"
 #include <utility>
+#include <vector>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -22,7 +23,7 @@
 
 Grid MakeGrid(const std::string &filename);
 
-void PrintSolution(Grid &grid, const std::vector<State> &solution);
+void PrintSolution(Grid &grid, const std::vector<State> &solution, const std::string &filename);
 
 
 

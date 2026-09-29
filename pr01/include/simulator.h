@@ -15,12 +15,13 @@
 #include "../include/grid.h"
 #include "../include/robot.h"
 #include "../include/state.h"
+#include <vector>
 #include <utility>
 #include <iostream>
 
 class Simulator {
   public:
-    Simulator() {}
+    Simulator() = default;
     Simulator(const Grid &grid, const Robot &robot) : grid_(grid), robot_(robot) {}
 
     // Getters
@@ -41,22 +42,24 @@ class Simulator {
     // Este método actualiza el estado dentro de la lista de nodos abiertos cuando se modifican sus parámetros
     void UpdateOpen(const State &state);
 
+    void PrintIteration(int iter, std::ostream &out) const;
+    void PrintPath(const State &state, std::ostream &out);
     void Solution(const State &state);
 
     // Algoritmo con el bucle principal
-    State Algorithm();
+    State Algorithm(std::ostream &file);
 
   private:
 
-    Grid grid_;
-    Robot robot_;
+    Grid grid_{};
+    Robot robot_{};
 
     // Vectores para almacenar los nodos abiertos y cerrados
-    std::vector<State> open_;
-    std::vector<State> closed_;
+    std::vector<State> open_{};
+    std::vector<State> closed_{};
 
     // Lista/vector que almacenará los nodos que pertenecen a la solución en orden 
-    std::vector<State> solution_;
+    std::vector<State> solution_{};
 };
 
 #endif // SIMULATOR_H

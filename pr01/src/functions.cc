@@ -30,6 +30,7 @@ Grid MakeGrid(const std::string &filename) {
   std::string line;
   int row_number = 0;
 
+
   while (std::getline(file, line)) {
     if (line.empty()) {
       continue;
@@ -54,7 +55,7 @@ Grid MakeGrid(const std::string &filename) {
 
       if (coste == 0) {
         start = state.coord_;
-        counter_start++;
+        counter_start++;                         
       }
 
       if (coste == 10) {
@@ -88,6 +89,7 @@ Grid MakeGrid(const std::string &filename) {
 
   if (counter_start != 1) {
     std::cerr << "Error en el formato de la matriz de entrada. Debe haber exactamente una casilla de inicio, ni más ni menos" << std::endl;
+    exit(EXIT_FAILURE);
   }
 
   Grid grid(matrix, rows, cols, start, end);
@@ -95,7 +97,10 @@ Grid MakeGrid(const std::string &filename) {
   return grid;
 }
 
-void PrintSolution(Grid &grid, const std::vector<State> &solution) {
+void PrintSolution(Grid &grid, const std::vector<State> &solution, const std::string &filename) {
+  
+  std::ofstream file{filename};
+
   int rows = grid.GetNRow();
   int cols = grid.GetNCol();
   
@@ -114,10 +119,13 @@ void PrintSolution(Grid &grid, const std::vector<State> &solution) {
 
       if (is_solution) {
         std::cout << " * ";
+        file << " * ";
       } else {
         std::cout << " " << grid.GetState(position.first, position.second).cost_ << " ";
+        file << " " << grid.GetState(position.first, position.second).cost_ << " ";
       }
     }
     std::cout << std::endl;
+    file << std::endl;
   }
 }
