@@ -6,7 +6,8 @@
  * @file robot.h
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-25
- * @brief 
+ * @brief Archivo para declarar la clase robot. Esta representará al robot dentro del tablero, y su 
+ *        única responsabilidad será la de saber como moverse a las 4 posibles direcciones. 
  */
 
 #ifndef ROBOT_H
@@ -17,8 +18,9 @@
 
 class Robot {
   public:
-    Robot() {}
+    Robot() = default;
 
+    // Métodos para el movimiento
     std::pair<int, int> MoveUp(const State &state);
     std::pair<int, int> MoveDown(const State &state);
     std::pair<int, int> MoveRight(const State &state);

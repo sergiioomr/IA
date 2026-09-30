@@ -6,7 +6,7 @@
  * @file grid.cc
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-25
- * @brief 
+ * @brief Archivo que define los métodos de la clase Grid
  */
 
 #ifndef GRID_CC
@@ -14,6 +14,14 @@
 
 #include "../include/grid.h"
 
+/**
+ * @brief Evalúa si una casilla es válida o no (obstáculo o fuera de límites)
+ * 
+ * @param row 
+ * @param col 
+ * @return true 
+ * @return false 
+ */
 bool Grid::IsValid(int row, int col) const {
   // Check if the position is out of bounds
   if ((row < 0) || (row >= n_row_) || (col < 0) || (col >= n_col_)) {
@@ -28,6 +36,13 @@ bool Grid::IsValid(int row, int col) const {
   return true;
 }
 
+/**
+ * @brief Retorna un estado por referencia a partir de unas coordenadas. Para poder vincular estados con coordenadas y poderlos modificar. 
+ * 
+ * @param row 
+ * @param col 
+ * @return State& 
+ */
 State& Grid::GetState(const int row, const int col) {
   return grid_[row][col];
 }

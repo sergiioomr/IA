@@ -2,15 +2,21 @@
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
  * Grado en Ingeniería Informática
- * @asignatura
+ * Ingeligencia Artificial
  * @file simulator.cc
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-27
- * @brief 
+ * @brief Archivo que incluye la definición de los métodos de la clase Simulator
  */
 
 #include "../include/simulator.h"
 
+/**
+ * @brief Calcula la función g de un estado. Lo hace sumando la g de su nodo padre y la del nodo actual
+ * 
+ * @param state 
+ * @return int 
+ */
 int Simulator::FunctionG(const State &state) {
   // El nodo inicial siempre tendrá g = 0
   if (state.coord_ == grid_.GetStart()) {
@@ -27,6 +33,13 @@ int Simulator::FunctionG(const State &state) {
   return grid_.GetState(state.parent_coords.first, state.parent_coords.second).g + cost;
 }
 
+
+/**
+ * @brief Calcula la función heurística. Esta sigue la siguiente fórmula: 2 * ( |num_filas - fila_actual| + |num_col - col_actual|)
+ * 
+ * @param state 
+ * @return int 
+ */
 int Simulator::Heuristic(const State &state) {       
   int dist_fil = std::abs(grid_.GetEnd().first - state.coord_.first);
   int dist_col = std::abs(grid_.GetEnd().second - state.coord_.second);
@@ -34,10 +47,24 @@ int Simulator::Heuristic(const State &state) {
   return 2 * (dist_fil + dist_col);
 }
 
+
+/**
+ * @brief Calcula la función f. Esta sigue la siguiente fórmula: f(e) = g(e) + h(e)
+ * 
+ * @param g 
+ * @param h 
+ * @return int 
+ */
 int Simulator::FunctionF(const int g, const int h) {
   return g + h;
 }
 
+
+/**
+ * @brief Método que recorre la lista de nodos abiertos, y obtiene el que menor valor de f tiene. En caso de empate, se quedará con el más antiguo de la lista. 
+ * 
+ * @return int 
+ */
 int Simulator::GetBestNode() {
   int index = 0;
 
@@ -49,6 +76,14 @@ int Simulator::GetBestNode() {
   return index;
 }
 
+
+/**
+ * @brief Comprueba si un estado/par de coordenadas está en la lista de cerrados
+ * 
+ * @param coord 
+ * @return true 
+ * @return false 
+ */
 bool Simulator::InClosed(const std::pair<int, int> &coord) {
   for (size_t i = 0; i < closed_.size(); i++) {
     if (closed_[i].coord_ == coord) {
@@ -59,6 +94,14 @@ bool Simulator::InClosed(const std::pair<int, int> &coord) {
   return false;
 }
 
+
+/**
+ * @brief Comprueba si un estado/par de coordenadas está en la lista de abiertos
+ * 
+ * @param coord 
+ * @return true 
+ * @return false 
+ */
 bool Simulator::InOpen(const std::pair<int, int> &coord) {
   for (size_t i = 0; i < open_.size(); i++) {
     if (open_[i].coord_ == coord) {
@@ -69,6 +112,12 @@ bool Simulator::InOpen(const std::pair<int, int> &coord) {
   return false;
 }
 
+
+/**
+ * @brief Actualiza los valores de un nodo que está en abiertos, que ha sido modificado. 
+ * 
+ * @param state 
+ */
 void Simulator::UpdateOpen(const State &state) {
     for (size_t i = 0; i < open_.size(); i++) {
     if (open_[i].coord_ == state.coord_) {
@@ -80,6 +129,13 @@ void Simulator::UpdateOpen(const State &state) {
   }
 }
 
+
+/**
+ * @brief Se encarga de imprimir una iteración con el formato solicitado
+ * 
+ * @param iter 
+ * @param out 
+ */
 void Simulator::PrintIteration(int iter, std::ostream &out) const {
   out << "Iteración " << iter << "\n-----------\n";
 
@@ -105,6 +161,13 @@ void Simulator::PrintIteration(int iter, std::ostream &out) const {
   out << "\n------------------------\n";
 }
 
+
+/**
+ * @brief Se encarga de imprimir la solución en formato (r1, c1) -> (r2, c2) -> (r3, c3) -> ... Y añade el coste total del camino
+ * 
+ * @param state 
+ * @param out 
+ */
 void Simulator::PrintPath(const State &state, std::ostream &out) {
   out << "Camino: ";
   for (size_t i = 0; i < solution_.size(); i++) {
@@ -121,17 +184,17 @@ void Simulator::PrintPath(const State &state, std::ostream &out) {
 
 
 /**
- * @brief That method run the main loop of the A* algorithm
+ * @brief Se encarga de simular el algoritmo A*
  * 
  */
 State Simulator::Algorithm(std::ostream &file) {
-  // 1. Empezar en el estado inicial. Poner todos los parámetros de este nodo y añadir a abiertos.
+  // Se empieza en el estado inicial. Poner todos los parámetros de este nodo y añadir a abiertos.
   State &initial = grid_.GetState(grid_.GetStart().first, grid_.GetStart().second);
   initial.g = 0;
   initial.h = Heuristic(initial);
   initial.f = FunctionF(initial.h, initial.g);
 
-  // El nodo inicial nunca tendrá un padre
+  // El nodo inicial nunca tendrá un padre, por tanto ponemos unas coordenadas "nulas"
   initial.parent_coords = {-1, -1};
 
   int iteration = 0;
@@ -140,18 +203,18 @@ State Simulator::Algorithm(std::ostream &file) {
   PrintIteration(iteration, std::cout);
   PrintIteration(iteration, file);
 
-  // 2. Empezar el bucle principal, mientras el vector de abiertos no quede vacío, estará ejecutándose, si llegase a terminar, significa que no existe un camino hasta el destino.
+  // Empieza el bucle principal, mientras el vector de abiertos no quede vacío, estará ejecutándose, si llega a terminar, significa que no existe un camino hasta el destino.
   while (!open_.empty()) {
     iteration++;
     
-    // Coger el nodo con menor f de la lista de nodos abiertos y eliminarlo de esta. Añadirlo a la de cerrados
+    // Coger el estado con menor f de la lista de nodos abiertos y eliminarlo de esta. Añadirlo a la de cerrados
     int index = GetBestNode();
 
     State next_state = open_[index];
     open_.erase(open_.begin() + index);
     closed_.push_back(next_state);
 
-    // Comprobar si este nodo es el final
+    // Comprobar si es el final
     if (next_state.coord_ == grid_.GetEnd()) {
       PrintIteration(iteration, std::cout);
       PrintIteration(iteration, file);
@@ -183,7 +246,7 @@ State Simulator::Algorithm(std::ostream &file) {
         continue;
       }
 
-      // Actualizar el nodo padre para que los cálculos posteriores de la función g sean correctos. Almacenar el padre antiguo
+      // Actualizar el estado padre para que los cálculos posteriores de la función g sean correctos. Almacenar el padre antiguo
       std::pair<int, int> previous_parent = new_state.parent_coords;
       new_state.parent_coords = next_state.coord_;
 
@@ -204,7 +267,7 @@ State Simulator::Algorithm(std::ostream &file) {
           new_state.parent_coords = previous_parent;
         } 
       } else {
-      // Sino, la opción que queda es que sera un nodo nuevo, así que calculamos todos sus parámetros y se pone en abiertos
+      // Sino, la opción que queda es que sera un estado nuevo, así que calculamos todos sus parámetros y se pone en abiertos
         new_state.h = Heuristic(new_state);
         new_state.g = FunctionG(new_state);
         new_state.f = FunctionF(new_state.h, new_state.g);
@@ -227,7 +290,13 @@ State Simulator::Algorithm(std::ostream &file) {
   return error;
 }
 
- void Simulator::Solution(const State &state) {
+
+/**
+ * @brief A partir del nodo final, obtenido del método Algorithm(), se calculará la solución volviendo hacia atrás y se pondrá en el vector solution. 
+ * 
+ * @param state 
+ */
+void Simulator::Solution(const State &state) {
   solution_.clear();
 
   State current = state;

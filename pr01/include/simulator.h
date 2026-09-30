@@ -2,11 +2,12 @@
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
  * Grado en Ingeniería Informática
- * @asignatura
+ * Inteligencia Artificial 
  * @file simulator.h
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-27
- * @brief 
+ * @brief Archivo que declara la clase Simulator. Esta será la encargada de ejecutar el algoritmo. Incluye un grid, un robot, y tres listas, una de nodos abiertos
+ *        otra de cerrados y una para la solución. Sus métodos son todos para poder ejecutar el algoritmo y calcular la solución.
  */
 
 #ifndef SIMULATOR_H
@@ -42,15 +43,17 @@ class Simulator {
     // Este método actualiza el estado dentro de la lista de nodos abiertos cuando se modifican sus parámetros
     void UpdateOpen(const State &state);
 
+    // Métodos para imprimir los resultados
     void PrintIteration(int iter, std::ostream &out) const;
     void PrintPath(const State &state, std::ostream &out);
+
+    // Método que calcula la solución
     void Solution(const State &state);
 
     // Algoritmo con el bucle principal
     State Algorithm(std::ostream &file);
 
   private:
-
     Grid grid_{};
     Robot robot_{};
 

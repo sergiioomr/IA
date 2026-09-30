@@ -7,11 +7,18 @@
  * @file functions.h
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-28
- * @brief 
+ * @brief Archivo que define los métodos del fichero functions.h
  */
 
 #include "../include/functions.h"
 
+/**
+ * @brief Se encarga de crear un objeto Grid a partir del archivo que se le pase por parámetro. Creara todos los estados, almacenará sus costes, y 
+ *        guardará las dimensiones de la matriz, la casilla inicial y la final para poder crear el Grid.
+ * 
+ * @param filename 
+ * @return Grid 
+ */
 Grid MakeGrid(const std::string &filename) {
   std::ifstream file(filename);
 
@@ -97,6 +104,14 @@ Grid MakeGrid(const std::string &filename) {
   return grid;
 }
 
+
+/**
+ * @brief Imprime la matriz solución, sustituyendo el valor que tenga cada posición perteneciente a la solución por *. También lo manda a un fichero. 
+ * 
+ * @param grid 
+ * @param solution 
+ * @param filename 
+ */
 void PrintSolution(Grid &grid, const std::vector<State> &solution, const std::string &filename) {
   
   std::ofstream file{filename};

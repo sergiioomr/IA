@@ -2,11 +2,11 @@
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
  * Grado en Ingeniería Informática
- * @asignatura
+ * Inteligencia Artificial
  * @file robot.cc
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-25
- * @brief 
+ * @brief Archivo para definir los métodos de la clase Robot
  */
 
 #ifndef ROBOT_CC

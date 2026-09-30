@@ -2,11 +2,11 @@
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
  * Grado en Ingeniería Informática
- * @asignatura
+ * Inteligencia Artificial
  * @file main.cc
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-28
- * @brief 
+ * @brief Archivo que implementa el programa main. 
  */
 
 #include "../include/grid.h"
@@ -16,7 +16,7 @@
 #include "../include/functions.h"
 
 int main(int argc, char* argv[]) {
-  // Obtener el nombre del archivo
+  // Obtener el nombre de los archivos. 
   std::string filename = argv[1];
   std::string output_map = argv[2];
   std::string output_trace = argv[3];

@@ -2,11 +2,14 @@
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
  * Grado en Ingeniería Informática
- * @asignatura
+ * Inteligencia Artificial
  * @file state.h
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-25
- * @brief 
+ * @brief Archivo para definir una clase estado. Esta nos permitirá almacenar los diferentes estados
+ *        que se puedan encontrar dentro del tablero, uno por coordenada. Teniendo atributos como sus coordenadas,
+ *        las de su padre, para poder rehacer el camino, y los valores de coste, h, g y f.
+ *  
  */
 #ifndef STATE_H
 #define STATE_H

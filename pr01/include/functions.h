@@ -2,12 +2,12 @@
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
  * Grado en Ingeniería Informática
- * Informática Básica
+ * Inteligencia Artificial
  * 
  * @file functions.h
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-09-28
- * @brief 
+ * @brief Archivo que declara algunos métodos para ayudar a la ejecución del programa. 
  */
 
 #ifndef FUNCTIONS_H
