@@ -1,0 +1,3 @@
+/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles/PFSP.dir
+/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles/edit_cache.dir
+/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles/rebuild_cache.dir
