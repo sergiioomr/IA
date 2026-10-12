@@ -1,0 +1,3 @@
+/home/molina/TercerCurso/PrimerCuatri/IA/pr01/build/CMakeFiles/Busqueda_A.dir
+/home/molina/TercerCurso/PrimerCuatri/IA/pr01/build/CMakeFiles/edit_cache.dir
+/home/molina/TercerCurso/PrimerCuatri/IA/pr01/build/CMakeFiles/rebuild_cache.dir

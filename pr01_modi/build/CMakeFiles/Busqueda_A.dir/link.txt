@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Busqueda_A.dir/src/main.cc.o CMakeFiles/Busqueda_A.dir/src/grid.cc.o CMakeFiles/Busqueda_A.dir/src/robot.cc.o CMakeFiles/Busqueda_A.dir/src/simulator.cc.o CMakeFiles/Busqueda_A.dir/src/functions.cc.o -o Busqueda_A 
