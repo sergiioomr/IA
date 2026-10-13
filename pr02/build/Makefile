@@ -153,6 +153,30 @@ src/ProblemPSFP.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.s
 .PHONY : src/ProblemPSFP.cc.s
 
+src/algorithms.o: src/algorithms.cc.o
+.PHONY : src/algorithms.o
+
+# target to build an object file
+src/algorithms.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/algorithms.cc.o
+.PHONY : src/algorithms.cc.o
+
+src/algorithms.i: src/algorithms.cc.i
+.PHONY : src/algorithms.i
+
+# target to preprocess a source file
+src/algorithms.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/algorithms.cc.i
+.PHONY : src/algorithms.cc.i
+
+src/algorithms.s: src/algorithms.cc.s
+.PHONY : src/algorithms.s
+
+# target to generate assembly for a file
+src/algorithms.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/algorithms.cc.s
+.PHONY : src/algorithms.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... src/ProblemPSFP.o"
 	@echo "... src/ProblemPSFP.i"
 	@echo "... src/ProblemPSFP.s"
+	@echo "... src/algorithms.o"
+	@echo "... src/algorithms.i"
+	@echo "... src/algorithms.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

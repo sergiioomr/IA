@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o"
   "CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o.d"
+  "CMakeFiles/PFSP.dir/src/algorithms.cc.o"
+  "CMakeFiles/PFSP.dir/src/algorithms.cc.o.d"
   "CMakeFiles/PFSP.dir/src/main.cc.o"
   "CMakeFiles/PFSP.dir/src/main.cc.o.d"
   "PFSP"

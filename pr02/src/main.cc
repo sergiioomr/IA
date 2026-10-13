@@ -11,6 +11,7 @@
  */
 
 #include "../include/ProblemPSFP.h"
+#include "../include/algorithms.h"
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -20,14 +21,17 @@ int main(int argc, char *argv[]) {
 
     ProblemPSFP problem(argv[1]);
 
-    // Ejemplo de permutación para calcular el makespan
-    std::vector<int> example_permutation(problem.getN());
-    for (int i = 0; i < problem.getN(); ++i) {
-        example_permutation[i] = i; // Permutación trivial: [0, 1, 2, ..., n-1]
+    // Probar el algoritmo de búsqueda aleatoria
+    int max_evaluations = 50000; // Número máximo de evaluaciones
+    std::vector<int> best_permutation = RandomSearch(problem, max_evaluations);
+
+    // Imprimir la mejor permutación encontrada
+    std::cout << "Mejor permutación encontrada: ";
+    for (int job : best_permutation) {
+        std::cout << job << " ";
     }
+    std::cout << std::endl;
 
-    int makespan = problem.CalculateMakespan(example_permutation);
-    std::cout << "Makespan para la permutación trivial: " << makespan << std::endl;
-
-    return EXIT_SUCCESS;
+    std::cout << "Makespan de la mejor permutación: " << problem.CalculateMakespan(best_permutation) << std::endl;
+    return 0;
 }

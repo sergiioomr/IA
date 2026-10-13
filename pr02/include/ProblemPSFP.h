@@ -7,7 +7,10 @@
  * @author Sergio Molina Ríos (alu0101718194@ull.edu.es)
  * @date 2026-10-12
  * @brief 
+ * Este archivo contiene la implementación de la clase ProblemPSFP
  */
+#ifndef PROBLEMPSFP_H
+#define PROBLEMPSFP_H
 
 #include <iostream>
 #include <fstream>
@@ -32,3 +35,5 @@ class ProblemPSFP {
     int UB_;
     std::vector<std::vector<int>> processing_times_;
 };
+
+#endif // PROBLEMPSFP_H

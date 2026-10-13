@@ -158,4 +158,6 @@ CMakeFiles/PFSP.dir/src/main.cc.o: \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bits/vector.tcc \
+ /home/sergio/Uni/Tercero/IA/pr02/src/../include/algorithms.h \
+ /home/sergio/Uni/Tercero/IA/pr02/src/../include/ProblemPSFP.h

@@ -12,6 +12,11 @@
 
 #include "../include/ProblemPSFP.h"
 
+/**
+ * @brief Constructor de la clase ProblemPSFP. Lee los datos del archivo y los almacena en los atributos de la clase.
+ * 
+ * @param filename 
+ */
 ProblemPSFP::ProblemPSFP(const std::string &filename) {
     std::ifstream file(filename);
     if (!file.is_open()) {
@@ -40,6 +45,12 @@ ProblemPSFP::ProblemPSFP(const std::string &filename) {
     }
 }
 
+/**
+ * @brief Calcula el makespan para una permutación dada
+ * 
+ * @param permutation 
+ * @return int 
+ */
 int ProblemPSFP::CalculateMakespan(const std::vector<int> &permutation) const {
   // Usar una matriz auxiliar, inicializada a cero, para ir rellenandola, la casilla de abajo a la derecha quedará tras rellenarla con el valor del makespan
   std::vector<std::vector<int>> C(m_ + 1, std::vector<int>(n_ + 1, 0));

@@ -44,6 +44,8 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 add_executable(PFSP
 src/main.cc
 src/ProblemPSFP.cc
+src/algorithms.cc
+include/algorithms.h
 include/ProblemPSFP.h
 )
 
