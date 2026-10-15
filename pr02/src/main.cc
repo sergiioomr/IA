@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 
     // Probar el algoritmo de búsqueda aleatoria
     int max_evaluations = 50000; // Número máximo de evaluaciones
-    std::vector<int> best_permutation = RandomSearch(problem, max_evaluations);
+    std::vector<int> best_permutation = HeuristicNEH(problem);
 
     // Imprimir la mejor permutación encontrada
     std::cout << "Mejor permutación encontrada: ";

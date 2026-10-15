@@ -52,11 +52,15 @@ ProblemPSFP::ProblemPSFP(const std::string &filename) {
  * @return int 
  */
 int ProblemPSFP::CalculateMakespan(const std::vector<int> &permutation) const {
+  // No utilizar la n del problema completo, ya que, al calcular la heurística NEH, e ir calculando el makespan de permutaciones parciales,
+  //  el tamaño de esta puede ser menor que la n del problema, por eso, usamos el tamaño de la permutación que se nos pasa
+  int current_n = permutation.size();
+
   // Usar una matriz auxiliar, inicializada a cero, para ir rellenandola, la casilla de abajo a la derecha quedará tras rellenarla con el valor del makespan
-  std::vector<std::vector<int>> C(m_ + 1, std::vector<int>(n_ + 1, 0));
+  std::vector<std::vector<int>> C(m_ + 1, std::vector<int>(current_n + 1, 0));
   // Ahora, ir rellénandola
   for (int i = 1; i < m_+1 ; i++) {
-    for (int j = 1; j < n_+1; j++) {
+    for (int j = 1; j < current_n + 1; j++) {
       int up_cell = C[i-1][j];
       int left_cell = C[i][j-1];
       if (up_cell >= left_cell) {
@@ -68,6 +72,17 @@ int ProblemPSFP::CalculateMakespan(const std::vector<int> &permutation) const {
     }
   }
 
-  return C[m_][n_];
+  return C[m_][current_n];
 }
 
+
+/**
+ * @brief Obtiene el tiempo de procesamiento de un trabajo en una máquina
+ * 
+ * @param job 
+ * @param machine 
+ * @return int 
+ */
+int ProblemPSFP::GetProcessingTime(int job, int machine) const {
+  return processing_times_[machine][job];
+}

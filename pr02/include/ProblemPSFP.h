@@ -26,6 +26,9 @@ class ProblemPSFP {
     int getM() const { return m_; }
     int getUB() const { return UB_; }
 
+    // Método para obtener el tiempo de procesamiento de un trabajo i en una máquina j
+    int GetProcessingTime(int job, int machine) const;
+
     // Método para calcular el makespan de una permutación dada
     int CalculateMakespan(const std::vector<int> &permutation) const;
 
