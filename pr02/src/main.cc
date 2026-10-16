@@ -21,17 +21,29 @@ int main(int argc, char *argv[]) {
 
     ProblemPSFP problem(argv[1]);
 
-    // Probar el algoritmo de búsqueda aleatoria
-    int max_evaluations = 50000; // Número máximo de evaluaciones
+    // Probar el algoritmo de búsqueda heurística
     std::vector<int> best_permutation = HeuristicNEH(problem);
 
     // Imprimir la mejor permutación encontrada
-    std::cout << "Mejor permutación encontrada: ";
+    std::cout << "Mejor permutación encontrada NEH: ";
     for (int job : best_permutation) {
         std::cout << job << " ";
     }
     std::cout << std::endl;
 
-    std::cout << "Makespan de la mejor permutación: " << problem.CalculateMakespan(best_permutation) << std::endl;
+    std::cout << "Makespan de la mejor permutación NEH: " << problem.CalculateMakespan(best_permutation) << std::endl;
+
+    // Probar el algoritmo de búsqueda aleatoria
+    int max_evaluations = 100000; // Número máximo de evaluaciones
+    std::vector<int> best_permutation_random = RandomSearch(problem, max_evaluations);
+
+    // Imprimir la mejor permutación encontrada
+    std::cout << "Mejor permutación encontrada randomsearch: ";
+    for (int job : best_permutation_random) {
+        std::cout << job << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Makespan de la mejor permutación randomSearch: " << problem.CalculateMakespan(best_permutation_random) << std::endl;
     return 0;
 }
