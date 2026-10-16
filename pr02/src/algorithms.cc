@@ -11,10 +11,7 @@
  */
 
 #include "../include/algorithms.h"
-#include <random>
-#include <algorithm>
-#include <ctime>
-#include <utility>
+
 
 /**
  * @brief Implementación del algoritmo de búsqueda aleatoria

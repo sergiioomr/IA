@@ -14,6 +14,10 @@
 #define ALGORITHMS_H
 
 #include "ProblemPSFP.h"
+#include <random>
+#include <algorithm>
+#include <ctime>
+#include <utility>
 
 // Algoritmos "externos" al algoritmo genético
 std::vector<int> RandomSearch(const ProblemPSFP& problem, int max_evaluations);
