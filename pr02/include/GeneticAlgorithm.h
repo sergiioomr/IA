@@ -35,10 +35,11 @@ class AG {
   private:
     // Atributos
     ProblemPSFP instancia_;
-    int pc_;
-    int pm_;
-    int N_;
-    int max_evaluations_;
+    int pc_; // Probabilidad de cruce
+    int pm_; // Probabilidad de mutación
+    int N_; // Tamaño de las poblaciones
+    int max_evaluations_; // Número de evaluaciones a ejecutar en el algoritmo
+    int k_; // Parámetro que determina entre cuantos individuos se realiza el torneo de selección
     std::mt19937 generator_;
     
     // Métodos

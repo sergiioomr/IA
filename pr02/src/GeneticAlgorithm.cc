@@ -53,7 +53,17 @@ std::vector<Individual> AG::InitializePopulation() {
  */
 Individual AG::SeleccionTorneo(const std::vector<Individual> &population) {
   // Elegir primero a uno de los k individuos aleatoriamente, y después, ir generando y comparando con este primero
-  
+  int best_index = generator_() % N_;
+
+  for (int i = 1; i < k_; i++) {
+    int random_index = generator_() % N_;
+    if (population[random_index].makespan < population[best_index].makespan) {
+      // Si el makespan mejora al mejor actual, quedarnos con este
+      best_index = random_index;
+    }
+  }
+
+  return population[best_index];
 }
 
 /**
