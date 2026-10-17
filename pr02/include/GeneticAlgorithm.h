@@ -30,7 +30,7 @@ class AG {
     AG(const ProblemPSFP &problem, int pc, int pm, int N, int max_evaluations, int seed) : 
       instancia_(problem), pc_(pc), pm_(pm), N_(N), max_evaluations_(max_evaluations), generator_(seed) {}
 
-    std::vector<int> Run();
+    Individual Run();
 
   private:
     // Atributos
@@ -46,8 +46,9 @@ class AG {
     std::vector<Individual> InitializePopulation();
     Individual SeleccionTorneo(const std::vector<Individual> &population);
     std::pair<Individual, Individual> CruceOX(const Individual &p1, const Individual &p2);
-    Individual Mutacion(const Individual &p);
-    std::vector<Individual> ReemplazoPoblacion(const std::vector<Individual> &P1, const std::vector<Individual> &P2);
+    void Mutacion(Individual &p);
+    std::vector<Individual> ReemplazoPoblacion(const std::vector<Individual> &P1, std::vector<Individual> &P2);
+    Individual GetBestIndividual(const std::vector<Individual> P);
 };
 
 #endif // GENETICALGORITHM_H
