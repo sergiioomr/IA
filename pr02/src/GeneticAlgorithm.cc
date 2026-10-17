@@ -236,12 +236,18 @@ Individual AG::GetBestIndividual(const std::vector<Individual> &P) {
  * @return Individual 
  */
 Individual AG::Run() {
+  // 1. Inicializar la población. Buscar al mejor e inicializar el número de evaluaciones a N, que son las que se han realizado al inicializar P.
   std::vector<Individual> P = InitializePopulation();
-  int num_evaluations = 0;
+  int num_evaluations = N_;
   Individual best = GetBestIndividual(P);
+
+  // 2. Iniciar el primer bucle, que se ejecutará max_evaluations_ veces.
   while (num_evaluations < max_evaluations_) {
     std::vector<Individual> new_P;
+
+  // 3. Crear la nueva generación, iterando N_ veces en un bucle.
     while (new_P.size() < N_) {
+      // Elegir dos individuos utilizando la selección por torneo
       Individual p1 = SeleccionTorneo(P);
       Individual p2 = SeleccionTorneo(P);
 
@@ -249,29 +255,41 @@ Individual AG::Run() {
       int random = generator_() % 100;
       Individual h1 = p1;
       Individual h2 = p2;
-      if (random <= pc_) {
+      if (random = pc_) {
         std::pair<Individual, Individual> childs = CruceOX(p1, p2);
         h1 = childs.first;
         h2 = childs.second;
+        num_evaluations += 2; // En cruce OX se calculan 2 makespan, aumentar en 2
       }
 
       // Mutar h1 con probabilidad Pm. Seguir el mismo método que con el cruce
       random = generator_() % 100;
-      if (random <= pm_) {
+      if (random = pm_) {
         Mutacion(h1);
+        num_evaluations++; // Se recalcula el makespan
       }
 
       random = generator_() % 100;
-      if (random <= pm_) {
+      if (random = pm_) {
         Mutacion(h2);
+        num_evaluations++;
       }
 
+      // Introducir el primer hijo en la población, y si hay hueco para el segundo, introducirlo también
       new_P.push_back(h1);
-      new_P.push_back(h2);
+      if (new_P.size() < N_) {
+        new_P.push_back(h2);
+      }
     }
 
+    // 4. Realizar el reemplazo generacional con elitismo
     P = ReemplazoPoblacion(P, new_P);
-    best = GetBestIndividual(P);
+
+    // 5. Actualizar el record absoluto si la nueva generación lo ha superado
+    Individual current_best = GetBestIndividual(P);
+    if (current_best.makespan < best.makespan) {
+      best = current_best;
+    }
   }
 
   return best;
