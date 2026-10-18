@@ -22,9 +22,10 @@ class ProblemPSFP {
     ProblemPSFP(const std::string &filename);
     
     // Getters
-    int getN() const { return n_; }
-    int getM() const { return m_; }
-    int getUB() const { return UB_; }
+    int GetN() const { return n_; }
+    int GetM() const { return m_; }
+    int GetUB() const { return UB_; }
+    int GetSeed() const { return seed_; }
 
     // Método para obtener el tiempo de procesamiento de un trabajo i en una máquina j
     int GetProcessingTime(int job, int machine) const;
@@ -36,6 +37,7 @@ class ProblemPSFP {
     int n_;
     int m_;
     int UB_;
+    int seed_;
     std::vector<std::vector<int>> processing_times_;
 };
 

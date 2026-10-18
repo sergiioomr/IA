@@ -31,7 +31,7 @@ ProblemPSFP::ProblemPSFP(const std::string &filename) {
     // Ahora, leer n, m y UB
     // Hay algunos valores que no interesan, guardamos n, m y UB en los atributos, el resto en las siguientes variables, pero no se usan
     int seed, lower_bound;
-    file >> n_ >> m_ >> seed >> UB_ >> lower_bound;
+    file >> n_ >> m_ >> seed_ >> UB_ >> lower_bound;
 
     std::getline(file, IgnoredLine); // Ignorar el resto de la línea
     std::getline(file, IgnoredLine); // Ignorar la siguiente cabecera

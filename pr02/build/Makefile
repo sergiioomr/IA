@@ -129,6 +129,30 @@ PFSP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/build
 .PHONY : PFSP/fast
 
+src/GeneticAlgorithm.o: src/GeneticAlgorithm.cc.o
+.PHONY : src/GeneticAlgorithm.o
+
+# target to build an object file
+src/GeneticAlgorithm.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o
+.PHONY : src/GeneticAlgorithm.cc.o
+
+src/GeneticAlgorithm.i: src/GeneticAlgorithm.cc.i
+.PHONY : src/GeneticAlgorithm.i
+
+# target to preprocess a source file
+src/GeneticAlgorithm.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.i
+.PHONY : src/GeneticAlgorithm.cc.i
+
+src/GeneticAlgorithm.s: src/GeneticAlgorithm.cc.s
+.PHONY : src/GeneticAlgorithm.s
+
+# target to generate assembly for a file
+src/GeneticAlgorithm.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.s
+.PHONY : src/GeneticAlgorithm.cc.s
+
 src/ProblemPSFP.o: src/ProblemPSFP.cc.o
 .PHONY : src/ProblemPSFP.o
 
@@ -177,6 +201,30 @@ src/algorithms.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/algorithms.cc.s
 .PHONY : src/algorithms.cc.s
 
+src/functions.o: src/functions.cc.o
+.PHONY : src/functions.o
+
+# target to build an object file
+src/functions.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/functions.cc.o
+.PHONY : src/functions.cc.o
+
+src/functions.i: src/functions.cc.i
+.PHONY : src/functions.i
+
+# target to preprocess a source file
+src/functions.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/functions.cc.i
+.PHONY : src/functions.cc.i
+
+src/functions.s: src/functions.cc.s
+.PHONY : src/functions.s
+
+# target to generate assembly for a file
+src/functions.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PFSP.dir/build.make CMakeFiles/PFSP.dir/src/functions.cc.s
+.PHONY : src/functions.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -210,12 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PFSP"
+	@echo "... src/GeneticAlgorithm.o"
+	@echo "... src/GeneticAlgorithm.i"
+	@echo "... src/GeneticAlgorithm.s"
 	@echo "... src/ProblemPSFP.o"
 	@echo "... src/ProblemPSFP.i"
 	@echo "... src/ProblemPSFP.s"
 	@echo "... src/algorithms.o"
 	@echo "... src/algorithms.i"
 	@echo "... src/algorithms.s"
+	@echo "... src/functions.o"
+	@echo "... src/functions.i"
+	@echo "... src/functions.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

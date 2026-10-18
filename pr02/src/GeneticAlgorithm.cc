@@ -24,12 +24,13 @@ std::vector<Individual> AG::InitializePopulation() {
   Individual neh_individual;
   neh_individual.permutation = HeuristicNEH(instancia_);
   neh_individual.makespan = instancia_.CalculateMakespan(neh_individual.permutation);
+  assert(ValidPermutation(neh_individual));
   population.push_back(neh_individual);
 
   // Ahora, hay que añadir N-1 individuos aletorios más a la población P
   // Primero, crear una permutación inicial ordenadar sobre la que mezclar los elementos aleatoriamente
-  std::vector<int> initial_permutation(instancia_.getN());
-  for (int i = 0; i < instancia_.getN(); i++) {
+  std::vector<int> initial_permutation(instancia_.GetN());
+  for (int i = 0; i < instancia_.GetN(); i++) {
     initial_permutation[i] = i;
   }
 
@@ -39,6 +40,7 @@ std::vector<Individual> AG::InitializePopulation() {
     random_individual.permutation = initial_permutation;
     std::shuffle(random_individual.permutation.begin(), random_individual.permutation.end(), generator_);
     random_individual.makespan = instancia_.CalculateMakespan(random_individual.permutation);
+    assert(ValidPermutation(random_individual));
     population.push_back(random_individual);
   }
   
@@ -255,23 +257,34 @@ Individual AG::Run() {
       int random = generator_() % 100;
       Individual h1 = p1;
       Individual h2 = p2;
-      if (random = pc_) {
+
+      if (random <  pc_) {
         std::pair<Individual, Individual> childs = CruceOX(p1, p2);
         h1 = childs.first;
         h2 = childs.second;
+
+        // Asegurar que los dos hijos nuevos son válidos
+        assert(ValidPermutation(h1));
+        assert(ValidPermutation(h2));
+
         num_evaluations += 2; // En cruce OX se calculan 2 makespan, aumentar en 2
       }
 
       // Mutar h1 con probabilidad Pm. Seguir el mismo método que con el cruce
       random = generator_() % 100;
-      if (random = pm_) {
+      if (random < pm_) {
         Mutacion(h1);
+        // Comprobar que sea válido tras modificarlo
+        assert(ValidPermutation(h1));
         num_evaluations++; // Se recalcula el makespan
       }
 
       random = generator_() % 100;
-      if (random = pm_) {
+      if (random < pm_) {
         Mutacion(h2);
+        // Comprobar que es válido
+        assert(ValidPermutation(h2));
+
         num_evaluations++;
       }
 
@@ -293,4 +306,42 @@ Individual AG::Run() {
   }
 
   return best;
+}
+
+
+/**
+ * @brief Método para comprobar si una permutación p es válida o no
+ * 
+ * @param p 
+ * @return true 
+ * @return false 
+ */
+bool AG::ValidPermutation(const Individual &p) {
+  // Para comprobar si la permutación es válida, debe cumplir:
+  //    1. Su tamaño debe ser igual al número de trabajos de la intancia
+  //    2. Cada elemento de la permutación tiene que estar en el rango de trabajos, es decir, si hay 20 trabajos, no puede haber un elemento 21
+  //    3. No pueden haber duplicados
+  int permutation_size = p.permutation.size();
+  if (permutation_size != instancia_.GetN()) {
+    return false;
+  }
+
+  // Ahora, en un vector de booleanos, pondremos a true la posición del trabajo si ya lo hemos encontrado, para comprobar si hay duplicados
+  std::vector<bool> visited(p.permutation.size(), false);
+  for (size_t i = 0; i < p.permutation.size(); i++) {
+    
+    int job = p.permutation[i];
+    
+    // Mirar si está en el rango válido de trabajos
+    if (job < 0 || job >= instancia_.GetN()) {
+      return false;
+    }
+
+    if (visited[job]) {
+      return false;
+    }
+
+    visited[job] = true;
+  }
+  return true;
 }

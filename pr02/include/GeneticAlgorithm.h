@@ -15,6 +15,7 @@
 
 #include "ProblemPSFP.h"
 #include "algorithms.h"
+#include <cassert>
 
 // Struct para representar a un invididuo
 struct Individual {
@@ -48,7 +49,8 @@ class AG {
     std::pair<Individual, Individual> CruceOX(const Individual &p1, const Individual &p2);
     void Mutacion(Individual &p);
     std::vector<Individual> ReemplazoPoblacion(const std::vector<Individual> &P1, std::vector<Individual> &P2);
-    Individual GetBestIndividual(const std::vector<Individual> P);
+    Individual GetBestIndividual(const std::vector<Individual> &P);
+    bool ValidPermutation(const Individual &p);
 };
 
 #endif // GENETICALGORITHM_H

@@ -22,14 +22,14 @@
  */
 std::vector<int> RandomSearch(const ProblemPSFP& problem, int max_evaluations) {
   // Crear una permutación inicial ordenada y calcular su makespan
-  std::vector<int> best_permutation(problem.getN());
-  for (int i = 0; i < problem.getN(); i++) {
+  std::vector<int> best_permutation(problem.GetN());
+  for (int i = 0; i < problem.GetN(); i++) {
     best_permutation[i] = i;
   }
 
   int best_makespan = problem.CalculateMakespan(best_permutation);
   std::mt19937 generator(std::time(nullptr));
-  std::vector<int> current_permutation(problem.getN());
+  std::vector<int> current_permutation(problem.GetN());
   current_permutation = best_permutation;
 
   for (int i = 0; i < max_evaluations; i++) {
@@ -55,11 +55,11 @@ std::vector<int> RandomSearch(const ProblemPSFP& problem, int max_evaluations) {
 std::vector<int> HeuristicNEH(const ProblemPSFP& problem) {
 // Calcular los tiempos totales de procesamiento de cada trabajo
 // Se almacenarán en un vector de pares <trabajo, tiempo>, donde cada trabajo irá ligado a su tiempo
-  std::vector<std::pair<int, int>> processing_times(problem.getN());
-  for (int i = 0; i< problem.getN(); i++) {
+  std::vector<std::pair<int, int>> processing_times(problem.GetN());
+  for (int i = 0; i< problem.GetN(); i++) {
     // Calcular el tiempo total de cada trabajo i
     int total = 0;
-    for (int j = 0; j < problem.getM(); j++) {
+    for (int j = 0; j < problem.GetM(); j++) {
       total += problem.GetProcessingTime(i, j);
     }
     processing_times[i].first = i;

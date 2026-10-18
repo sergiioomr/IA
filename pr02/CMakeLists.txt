@@ -45,6 +45,10 @@ add_executable(PFSP
 src/main.cc
 src/ProblemPSFP.cc
 src/algorithms.cc
+src/GeneticAlgorithm.cc
+src/functions.cc
+include/functions.h
+include/GeneticAlgorithm.h
 include/algorithms.h
 include/ProblemPSFP.h
 )
