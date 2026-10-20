@@ -115,3 +115,19 @@ std::vector<int> HeuristicNEH(const ProblemPSFP& problem) {
   }
   return current_solution;
 }
+
+/**
+ * @brief Retorna el valor de la desviación porcentual relativa, para un makespan dado. 
+ * 
+ * @param best_makespan 
+ * @param UB 
+ * @return double 
+ */
+double RPD(int best_makespan, int UB) {
+  if (UB == 0) {
+    return 0.0; // Evitar división por cero
+  }
+
+  double rpd = 100.0 * (best_makespan - UB) / UB;
+  return rpd;
+}

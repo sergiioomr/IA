@@ -1,7 +1,7 @@
 CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o: \
- /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/ProblemPSFP.cc \
+ /home/sergio/Uni/Tercero/IA/pr02/src/ProblemPSFP.cc \
  /usr/include/stdc-predef.h \
- /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/ProblemPSFP.h \
+ /home/sergio/Uni/Tercero/IA/pr02/src/../include/ProblemPSFP.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

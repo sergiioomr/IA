@@ -16,6 +16,7 @@
 #include "ProblemPSFP.h"
 #include "algorithms.h"
 #include <cassert>
+#include <iostream>
 
 // Struct para representar a un invididuo
 struct Individual {
@@ -28,8 +29,8 @@ class AG {
   public:
   // Constructor
   // Inicializamos el generador con la semilla de la instancia. Así, no hay que crear un generador local en cada método que use datos aleatorios
-    AG(const ProblemPSFP &problem, int pc, int pm, int N, int max_evaluations, int seed) : 
-      instancia_(problem), pc_(pc), pm_(pm), N_(N), max_evaluations_(max_evaluations), generator_(seed) {}
+    AG(const ProblemPSFP &problem, int pc, int pm, int N, int max_evaluations, int k, int seed) : 
+      instancia_(problem), pc_(pc), pm_(pm), N_(N), max_evaluations_(max_evaluations), k_(k), generator_(seed) {}
 
     Individual Run();
 

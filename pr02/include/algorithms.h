@@ -22,5 +22,6 @@
 // Algoritmos "externos" al algoritmo genético
 std::vector<int> RandomSearch(const ProblemPSFP& problem, int max_evaluations);
 std::vector<int> HeuristicNEH(const ProblemPSFP& problem);
+double RPD(int best_makespan, int UB);
 
 #endif // ALGORITHMS_H

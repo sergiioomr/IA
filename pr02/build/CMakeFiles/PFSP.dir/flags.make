@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/molina/TercerCurso/PrimerCuatri/IA/pr02/src
+CXX_INCLUDES = -I/home/sergio/Uni/Tercero/IA/pr02/src
 
 CXX_FLAGS = -std=gnu++17 -Wall -Wextra -Wpedantic -Weffc++
 

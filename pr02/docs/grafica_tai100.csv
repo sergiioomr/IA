@@ -1,0 +1,14 @@
+5052,6616
+10065,6598
+15096,6593
+20102,6592
+25120,6592
+30136,6592
+35162,6592
+40171,6592
+45202,6587
+50035,6587
+----------------- Resultados obtenidos -----------------
+- Algoritmo de búsqueda aleatoria: Makespan = 7300
+- Algoritmo heurístico NEH: Makespan = 6632
+- Algoritmo genético: Makespan = 6587

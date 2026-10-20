@@ -96,14 +96,14 @@ std::pair<Individual, Individual> AG::CruceOX(const Individual &p1, const Indivi
 
 
   // 4. Rellenar los elementos restantes de h1 con p2, y de h2 con p1
-  for (int i = 0; i < p1.permutation.size(); i++) {
+  for (size_t i = 0; i < p1.permutation.size(); i++) {
     int element_p2 = p2.permutation[i];
     int element_p1 = p1.permutation[i];
     bool find_p2 = false;
     bool find_p1 = false;
 
     // Mirar si el elemento de p2 y se encuentra en h1 y viceversa
-    for (int j = 0; j < h1.size(); j++) {
+    for (size_t j = 0; j < h1.size(); j++) {
       if (h1[j] == element_p2) {
         find_p2 = true;
       }
@@ -115,7 +115,7 @@ std::pair<Individual, Individual> AG::CruceOX(const Individual &p1, const Indivi
 
     // En caso de que el elemento no esté, hay que añadirlo. Buscamos el primer elemento que tenga valor -1 y se inserta ahí
     if (!find_p2) {
-      for (int j = 0; j < h1.size(); j++) {
+      for (size_t j = 0; j < h1.size(); j++) {
         if (h1[j] == -1) {
           h1[j] = element_p2;
           break;
@@ -124,7 +124,7 @@ std::pair<Individual, Individual> AG::CruceOX(const Individual &p1, const Indivi
     }
 
     if (!find_p1) {
-      for (int j = 0; j < h2.size(); j++) {
+      for (size_t j = 0; j < h2.size(); j++) {
         if (h2[j] == -1) {
           h2[j] = element_p1;
           break;
@@ -191,26 +191,26 @@ void AG::Mutacion(Individual &p) {
  * @param P2 
  * @return std::vector<Individual>
  */
-  std::vector<Individual> AG::ReemplazoPoblacion(const std::vector<Individual> &P1, std::vector<Individual> &P2) {
-    // Buscar al mejor individuo de la población P y al peor de P'. Ya que ambos deben tener tamaño N_, aprovechar el mismo bucle para las dos búsqedas
-    int best_P = 0;
-    int worst_P2 = 0;
-    for (int i = 0; i < P1.size(); i++) {
-      if (P1[i].makespan < P1[best_P].makespan) {
-        best_P = i;
-      }
-
-      if (P2[i].makespan > P2[worst_P2].makespan) {
-        worst_P2 = i;
-      }
+std::vector<Individual> AG::ReemplazoPoblacion(const std::vector<Individual> &P1, std::vector<Individual> &P2) {
+  // Buscar al mejor individuo de la población P y al peor de P'. Ya que ambos deben tener tamaño N_, aprovechar el mismo bucle para las dos búsqedas
+  int best_P = 0;
+  int worst_P2 = 0;
+  for (size_t i = 0; i < P1.size(); i++) {
+    if (P1[i].makespan < P1[best_P].makespan) {
+      best_P = i;
     }
 
-    // Aplicar el elitismo, si el mejor de P supera al peor de P', interacambiarlos
-    if (P1[best_P].makespan < P2[worst_P2].makespan) {
-      P2[worst_P2] = P1[best_P];
+    if (P2[i].makespan > P2[worst_P2].makespan) {
+      worst_P2 = i;
     }
+  }
 
-    return P2;
+  // Aplicar el elitismo, si el mejor de P supera al peor de P', interacambiarlos
+  if (P1[best_P].makespan < P2[worst_P2].makespan) {
+    P2[worst_P2] = P1[best_P];
+  }
+
+  return P2;
   }
 
 
@@ -222,7 +222,7 @@ void AG::Mutacion(Individual &p) {
  */
 Individual AG::GetBestIndividual(const std::vector<Individual> &P) {
   int best = 0;
-  for (int i = 0; i < P.size(); i++) {
+  for (size_t i = 0; i < P.size(); i++) {
     if (P[i].makespan < P[best].makespan) {
       best = i;
     }
@@ -242,6 +242,7 @@ Individual AG::Run() {
   std::vector<Individual> P = InitializePopulation();
   int num_evaluations = N_;
   Individual best = GetBestIndividual(P);
+  int ultima_impresion = 0;
 
   // 2. Iniciar el primer bucle, que se ejecutará max_evaluations_ veces.
   while (num_evaluations < max_evaluations_) {
@@ -302,6 +303,12 @@ Individual AG::Run() {
     Individual current_best = GetBestIndividual(P);
     if (current_best.makespan < best.makespan) {
       best = current_best;
+    }
+
+    // --- IMPRIMIR SOLO CADA 5000 EVALUACIONES O EN LA ÚLTIMA ---
+    if (num_evaluations - ultima_impresion >= 5000 || num_evaluations >= max_evaluations_) {
+      std::cout << num_evaluations << "," << best.makespan << std::endl;
+      ultima_impresion = num_evaluations;
     }
   }
 

@@ -1,7 +1,7 @@
 CMakeFiles/PFSP.dir/src/functions.cc.o: \
- /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/functions.cc \
+ /home/sergio/Uni/Tercero/IA/pr02/src/functions.cc \
  /usr/include/stdc-predef.h \
- /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/functions.h \
+ /home/sergio/Uni/Tercero/IA/pr02/src/../include/functions.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

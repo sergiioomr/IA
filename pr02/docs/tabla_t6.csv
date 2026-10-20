@@ -1,0 +1,15 @@
+# Fichero de resultados en bruto, sin formato. Se corresponde con la T6 y es la tabla solicitada.
+# Está diseñado para abrir o importar directamente en hojas de cálculo y mostrar la tabla ahí con el formato adecuado
+Instancia;NEH_Makespan;RS_Min;RS_Media;AG_Min;AG_Media
+tai20_5_1.fsp;1286;1301;1317.50;1282;1285.60
+tai20_10_1.fsp;1680;1695;1727.40;1610;1624.50
+tai20_20_1.fsp;2410;2444;2463.30;2342;2361.00
+tai50_5_1.fsp;2733;2767;2796.40;2729;2729.00
+tai50_10_1.fsp;3146;3415;3437.70;3077;3094.10
+tai50_20_1.fsp;4082;4387;4435.60;3986;4011.10
+tai100_5_1.fsp;5514;5596;5633.30;5493;5507.30
+tai100_10_1.fsp;5853;6333;6366.60;5822;5837.60
+tai100_20_1.fsp;6632;7225;7264.70;6521;6561.80
+tai200_10_1.fsp;10967;11527;11602.30;10965;10966.80
+tai200_20_1.fsp;11638;12790;12860.70;11590;11606.10
+tai500_20_1.fsp;26674;29040;29217.30;26632;26647.30
