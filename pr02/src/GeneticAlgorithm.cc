@@ -304,12 +304,6 @@ Individual AG::Run() {
     if (current_best.makespan < best.makespan) {
       best = current_best;
     }
-
-    // --- IMPRIMIR SOLO CADA 5000 EVALUACIONES O EN LA ÚLTIMA ---
-    if (num_evaluations - ultima_impresion >= 5000 || num_evaluations >= max_evaluations_) {
-      std::cout << num_evaluations << "," << best.makespan << std::endl;
-      ultima_impresion = num_evaluations;
-    }
   }
 
   return best;
