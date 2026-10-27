@@ -1,0 +1,24 @@
+Instancia: ../test/test_modi.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1727, RPD = 39.8381
+- Algoritmo heurístico NEH: Makespan = 1681, RPD = 36.1134
+- Algoritmo genético: Makespan = 1675, RPD = 35.6275
+--------------------------------------------------------
+
+Instancia: ../test/test_modi.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1764, RPD = 42.834
+- Algoritmo heurístico NEH: Makespan = 1681, RPD = 36.1134
+- Algoritmo genético: Makespan = 1675, RPD = 35.6275
+--------------------------------------------------------
+
+Instancia: ../test/test_modi.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1764, RPD = 42.834
+- Algoritmo heurístico NEH: Makespan = 1681, RPD = 36.1134
+- Algoritmo genético: Makespan = 1675, RPD = 35.6275
+--------------------------------------------------------
+

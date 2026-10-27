@@ -1,8 +1,8 @@
 CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o: \
- /home/sergio/Uni/Tercero/IA/pr02/src/GeneticAlgorithm.cc \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/GeneticAlgorithm.cc \
  /usr/include/stdc-predef.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/GeneticAlgorithm.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/ProblemPSFP.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/GeneticAlgorithm.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/ProblemPSFP.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -161,7 +161,7 @@ CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/algorithms.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/algorithms.h \
  /usr/include/c++/13/random /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \

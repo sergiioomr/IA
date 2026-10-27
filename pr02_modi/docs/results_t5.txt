@@ -1,0 +1,2062 @@
+=============================================================================================================================================
+RESULTADOS BRUTOS - TAREA 5: ESTUDIO DE PARÁMETROS DEL ALGORITMO GENÉTICO
+---------------------------------------------------------------------------------------------------------------------------------------------
+Este fichero contiene los resultados brutos obtenidos durante el análisis de parámetros antes de la Tarea 6.
+
+Para seleccionar los valores a usar de los parámetros en la Tarea 6, se realizaron 12 ejecuciones evaluando:
+  1. Tres instancias diferentes variando el tamaño:
+     - Pequeña:  tai20_5_1   (20 trabajos, 5 máquinas)
+     - Mediana:  tai50_10_1  (50 trabajos, 10 máquinas)
+     - Grande:   tai100_20_1 (100 trabajos, 20 máquinas)
+
+  2. Cuatro combinaciones de parámetros N (población) y Pm (mutación) por cada instancia:
+     2.1 N = 30, Pm = 5%
+     2.2 N = 30, Pm = 10%
+     2.3 N = 50, Pm = 5%
+     2.4 N = 50, Pm = 10%
+
+Conclusión:
+El parámetro que más influyó en el makespan fue Pm = 10. N = 50 también presentaba alguna mejora, pero no 
+tan diferencial como Pm = 10%, así que la elección de parámetros para la Tarea 6 fue N = 50 y Pm = 10%.
+=============================================================================================================================================
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 30, Pc = 80, Pm = 5, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1307, RPD = 2.26917
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 30, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1316, RPD = 2.9734
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 5, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1322, RPD = 3.44288
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1320, RPD = 3.28638
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+
+
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 30, Pc = 80, Pm = 5, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3460, RPD = 14.3802
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3107, RPD = 2.71074
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 30, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3447, RPD = 13.9504
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3106, RPD = 2.67769
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 5, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3440, RPD = 13.719
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3107, RPD = 2.71074
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3444, RPD = 13.8512
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+
+
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 30, Pc = 80, Pm = 5, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7268, RPD = 15.622
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6596, RPD = 4.93159
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 30, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7274, RPD = 15.7175
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6536, RPD = 3.97709
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 5, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7306, RPD = 16.2265
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6576, RPD = 4.61343
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7276, RPD = 15.7493
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+
+Como conclusión de estos datos, podemos decir que el mejor valor para Pm es del 10%, y el mejor para N es más independiente. Cuando pasamos
+de 5 a 10% en Pm, vemos mejoras significativas en todos los aumentos. Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 123456
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1311, RPD = 2.58216
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1324, RPD = 3.59937
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1305, RPD = 2.11268
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1305, RPD = 2.11268
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1305, RPD = 2.11268
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1305, RPD = 2.11268
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1307, RPD = 2.26917
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1307, RPD = 2.26917
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1307, RPD = 2.26917
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1315, RPD = 2.89515
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1315, RPD = 2.89515
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1747, RPD = 10.4298
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1747, RPD = 10.4298
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1712, RPD = 8.21745
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1712, RPD = 8.21745
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1740, RPD = 9.98736
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1740, RPD = 9.98736
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1740, RPD = 9.98736
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1740, RPD = 9.98736
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1740, RPD = 9.98736
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1705, RPD = 7.77497
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1648, RPD = 4.17193
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2457, RPD = 6.96561
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2469, RPD = 7.48803
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2469, RPD = 7.48803
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2468, RPD = 7.44449
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2438, RPD = 6.13844
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2438, RPD = 6.13844
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2464, RPD = 7.27035
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2476, RPD = 7.79277
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2476, RPD = 7.79277
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2461, RPD = 7.13975
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2798, RPD = 2.71659
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2790, RPD = 2.42291
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2807, RPD = 3.04699
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2807, RPD = 3.04699
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2788, RPD = 2.34949
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2798, RPD = 2.71659
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2798, RPD = 2.71659
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2800, RPD = 2.79001
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2805, RPD = 2.97357
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2805, RPD = 2.97357
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3414, RPD = 12.8595
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3428, RPD = 13.3223
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3447, RPD = 13.9504
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3423, RPD = 13.157
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3379, RPD = 11.7025
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3423, RPD = 13.157
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3436, RPD = 13.5868
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3402, RPD = 12.4628
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3418, RPD = 12.9917
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3447, RPD = 13.9504
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3093, RPD = 2.24793
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4412, RPD = 13.8581
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4474, RPD = 15.4581
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4439, RPD = 14.5548
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4454, RPD = 14.9419
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4460, RPD = 15.0968
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4463, RPD = 15.1742
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4396, RPD = 13.4452
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4438, RPD = 14.529
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4360, RPD = 12.5161
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4412, RPD = 13.8581
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5640, RPD = 2.67613
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5632, RPD = 2.53049
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5640, RPD = 2.67613
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5663, RPD = 3.09485
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5619, RPD = 2.29383
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5626, RPD = 2.42126
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5666, RPD = 3.14946
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5611, RPD = 2.14819
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5620, RPD = 2.31203
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5670, RPD = 3.22228
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5494, RPD = 0.018205
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6413, RPD = 11.1438
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6371, RPD = 10.4159
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6408, RPD = 11.0572
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6404, RPD = 10.9879
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6383, RPD = 10.6239
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6387, RPD = 10.6932
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6423, RPD = 11.3172
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6374, RPD = 10.4679
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6398, RPD = 10.8839
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6388, RPD = 10.7106
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7256, RPD = 15.4311
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7288, RPD = 15.9402
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7275, RPD = 15.7334
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7281, RPD = 15.8288
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7240, RPD = 15.1766
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7295, RPD = 16.0515
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7271, RPD = 15.6697
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7234, RPD = 15.0811
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7245, RPD = 15.2561
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7222, RPD = 14.8902
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6538, RPD = 4.00891
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11643, RPD = 7.13103
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11602, RPD = 6.75377
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11647, RPD = 7.16783
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11640, RPD = 7.10342
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11617, RPD = 6.89179
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11653, RPD = 7.22304
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11543, RPD = 6.21089
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11608, RPD = 6.80898
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11651, RPD = 7.20464
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11619, RPD = 6.9102
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12807, RPD = 13.3965
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12771, RPD = 13.0777
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12836, RPD = 13.6533
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12883, RPD = 14.0694
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12895, RPD = 14.1757
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12889, RPD = 14.1225
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12859, RPD = 13.8569
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12888, RPD = 14.1137
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12813, RPD = 13.4496
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12872, RPD = 13.972
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11629, RPD = 2.96618
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29158, RPD = 11.3368
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29272, RPD = 11.7721
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29206, RPD = 11.5201
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29248, RPD = 11.6805
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29132, RPD = 11.2375
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29224, RPD = 11.5888
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29253, RPD = 11.6996
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29089, RPD = 11.0734
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29233, RPD = 11.6232
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29278, RPD = 11.795
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 100, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1297, RPD = 1.4867
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1318, RPD = 3.12989
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1324, RPD = 3.59937
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1324, RPD = 3.59937
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1324, RPD = 3.59937
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1324, RPD = 3.59937
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1282, RPD = 0.312989
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1315, RPD = 2.89515
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1315, RPD = 2.89515
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1315, RPD = 2.89515
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1315, RPD = 2.89515
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1301, RPD = 1.79969
+- Algoritmo heurístico NEH: Makespan = 1286, RPD = 0.625978
+- Algoritmo genético: Makespan = 1286, RPD = 0.625978
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1740, RPD = 9.98736
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1623, RPD = 2.59166
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1740, RPD = 9.98736
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1615, RPD = 2.08597
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1695, RPD = 7.14286
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1626, RPD = 2.78129
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1695, RPD = 7.14286
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1629, RPD = 2.97092
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1695, RPD = 7.14286
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1610, RPD = 1.76991
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1764, RPD = 11.5044
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1632, RPD = 3.16056
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1764, RPD = 11.5044
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1619, RPD = 2.33881
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1727, RPD = 9.16561
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1613, RPD = 1.95954
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1727, RPD = 9.16561
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1651, RPD = 4.36157
+--------------------------------------------------------
+
+Instancia: ../test/tai20_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 1727, RPD = 9.16561
+- Algoritmo heurístico NEH: Makespan = 1680, RPD = 6.19469
+- Algoritmo genético: Makespan = 1627, RPD = 2.8445
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2472, RPD = 7.61863
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2342, RPD = 1.95908
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2472, RPD = 7.61863
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2349, RPD = 2.26382
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2489, RPD = 8.35873
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2359, RPD = 2.69917
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2444, RPD = 6.39965
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2444, RPD = 6.39965
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2368, RPD = 3.09099
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2448, RPD = 6.57379
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2384, RPD = 3.78755
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2448, RPD = 6.57379
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2366, RPD = 3.00392
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2472, RPD = 7.61863
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2472, RPD = 7.61863
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2361, RPD = 2.78624
+--------------------------------------------------------
+
+Instancia: ../test/tai20_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2472, RPD = 7.61863
+- Algoritmo heurístico NEH: Makespan = 2410, RPD = 4.91946
+- Algoritmo genético: Makespan = 2359, RPD = 2.69917
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2774, RPD = 1.83554
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2767, RPD = 1.57856
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2767, RPD = 1.57856
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2833, RPD = 4.00147
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2833, RPD = 4.00147
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2774, RPD = 1.83554
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2808, RPD = 3.0837
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2808, RPD = 3.0837
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2787, RPD = 2.31278
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 2813, RPD = 3.26725
+- Algoritmo heurístico NEH: Makespan = 2733, RPD = 0.330396
+- Algoritmo genético: Makespan = 2729, RPD = 0.183554
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3458, RPD = 14.314
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3089, RPD = 2.1157
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3415, RPD = 12.8926
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3086, RPD = 2.01653
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3446, RPD = 13.9174
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3107, RPD = 2.71074
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3440, RPD = 13.719
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3108, RPD = 2.7438
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3442, RPD = 13.7851
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3089, RPD = 2.1157
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3415, RPD = 12.8926
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3087, RPD = 2.04959
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3415, RPD = 12.8926
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3077, RPD = 1.71901
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3455, RPD = 14.2149
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3117, RPD = 3.04132
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3446, RPD = 13.9174
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3080, RPD = 1.81818
+--------------------------------------------------------
+
+Instancia: ../test/tai50_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 3445, RPD = 13.8843
+- Algoritmo heurístico NEH: Makespan = 3146, RPD = 4
+- Algoritmo genético: Makespan = 3101, RPD = 2.5124
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4421, RPD = 14.0903
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4033, RPD = 4.07742
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4475, RPD = 15.4839
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 3996, RPD = 3.12258
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4387, RPD = 13.2129
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4002, RPD = 3.27742
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4439, RPD = 14.5548
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4019, RPD = 3.71613
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4402, RPD = 13.6
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4015, RPD = 3.6129
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4407, RPD = 13.729
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4002, RPD = 3.27742
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4456, RPD = 14.9935
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4030, RPD = 4
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4481, RPD = 15.6387
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4021, RPD = 3.76774
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4476, RPD = 15.5097
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 3986, RPD = 2.86452
+--------------------------------------------------------
+
+Instancia: ../test/tai50_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 4412, RPD = 13.8581
+- Algoritmo heurístico NEH: Makespan = 4082, RPD = 5.34194
+- Algoritmo genético: Makespan = 4007, RPD = 3.40645
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5664, RPD = 3.11305
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5514, RPD = 0.382305
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5623, RPD = 2.36665
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5514, RPD = 0.382305
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5634, RPD = 2.5669
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5514, RPD = 0.382305
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5626, RPD = 2.42126
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5514, RPD = 0.382305
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5596, RPD = 1.87511
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5495, RPD = 0.03641
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5655, RPD = 2.94921
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5493, RPD = 0
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5601, RPD = 1.96614
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5514, RPD = 0.382305
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5676, RPD = 3.33151
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5495, RPD = 0.03641
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5623, RPD = 2.36665
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5506, RPD = 0.236665
+--------------------------------------------------------
+
+Instancia: ../test/tai100_5_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 5635, RPD = 2.58511
+- Algoritmo heurístico NEH: Makespan = 5514, RPD = 0.382305
+- Algoritmo genético: Makespan = 5514, RPD = 0.382305
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6396, RPD = 10.8492
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5839, RPD = 1.19584
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6373, RPD = 10.4506
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5840, RPD = 1.21317
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6370, RPD = 10.3986
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5839, RPD = 1.19584
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6355, RPD = 10.1386
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5839, RPD = 1.19584
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6389, RPD = 10.7279
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5839, RPD = 1.19584
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6380, RPD = 10.5719
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5839, RPD = 1.19584
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6336, RPD = 9.80936
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5822, RPD = 0.901213
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6356, RPD = 10.156
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5831, RPD = 1.05719
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6333, RPD = 9.75737
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5840, RPD = 1.21317
+--------------------------------------------------------
+
+Instancia: ../test/tai100_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 6378, RPD = 10.5373
+- Algoritmo heurístico NEH: Makespan = 5853, RPD = 1.43847
+- Algoritmo genético: Makespan = 5848, RPD = 1.35182
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7250, RPD = 15.3357
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6570, RPD = 4.51798
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7272, RPD = 15.6857
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6581, RPD = 4.69297
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7313, RPD = 16.3379
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6570, RPD = 4.51798
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7254, RPD = 15.3993
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6555, RPD = 4.27935
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7254, RPD = 15.3993
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6598, RPD = 4.96341
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7276, RPD = 15.7493
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6584, RPD = 4.74069
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7313, RPD = 16.3379
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6560, RPD = 4.35889
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7229, RPD = 15.0016
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6521, RPD = 3.73847
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7261, RPD = 15.5107
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6539, RPD = 4.02482
+--------------------------------------------------------
+
+Instancia: ../test/tai100_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 7225, RPD = 14.938
+- Algoritmo heurístico NEH: Makespan = 6632, RPD = 5.5043
+- Algoritmo genético: Makespan = 6540, RPD = 4.04073
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11527, RPD = 6.06367
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10965, RPD = 0.892529
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11581, RPD = 6.56054
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11658, RPD = 7.26905
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11590, RPD = 6.64336
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11620, RPD = 6.9194
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11644, RPD = 7.14023
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11571, RPD = 6.46853
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11609, RPD = 6.81818
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11634, RPD = 7.04821
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_10_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 11589, RPD = 6.63416
+- Algoritmo heurístico NEH: Makespan = 10967, RPD = 0.910931
+- Algoritmo genético: Makespan = 10967, RPD = 0.910931
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12870, RPD = 13.9543
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11591, RPD = 2.62971
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12860, RPD = 13.8658
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11623, RPD = 2.91305
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12852, RPD = 13.7949
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11620, RPD = 2.88649
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12790, RPD = 13.246
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11601, RPD = 2.71826
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12820, RPD = 13.5116
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11620, RPD = 2.88649
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12876, RPD = 14.0074
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11597, RPD = 2.68284
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12874, RPD = 13.9897
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11593, RPD = 2.64742
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12884, RPD = 14.0783
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11625, RPD = 2.93076
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12902, RPD = 14.2376
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11601, RPD = 2.71826
+--------------------------------------------------------
+
+Instancia: ../test/tai200_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 12879, RPD = 14.034
+- Algoritmo heurístico NEH: Makespan = 11638, RPD = 3.04587
+- Algoritmo genético: Makespan = 11590, RPD = 2.62086
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29274, RPD = 11.7798
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26659, RPD = 1.79465
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29311, RPD = 11.921
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26648, RPD = 1.75264
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29244, RPD = 11.6652
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26648, RPD = 1.75264
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29241, RPD = 11.6537
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26632, RPD = 1.69155
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29167, RPD = 11.3712
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26639, RPD = 1.71828
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29252, RPD = 11.6958
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26636, RPD = 1.70682
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29265, RPD = 11.7454
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26649, RPD = 1.75646
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29166, RPD = 11.3674
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26662, RPD = 1.8061
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29040, RPD = 10.8862
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26651, RPD = 1.7641
+--------------------------------------------------------
+
+Instancia: ../test/tai500_20_1.fsp
+Parámetros: N = 50, Pc = 80, Pm = 10, max_evaluations = 50000
+Resultados obtenidos:
+- Algoritmo de búsqueda aleatoria: Makespan = 29213, RPD = 11.5468
+- Algoritmo heurístico NEH: Makespan = 26674, RPD = 1.85192
+- Algoritmo genético: Makespan = 26649, RPD = 1.75646
+--------------------------------------------------------
+

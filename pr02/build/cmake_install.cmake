@@ -1,4 +1,4 @@
-# Install script for directory: /home/sergio/Uni/Tercero/IA/pr02
+# Install script for directory: /home/molina/TercerCurso/PrimerCuatri/IA/pr02
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sergio/Uni/Tercero/IA/pr02/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

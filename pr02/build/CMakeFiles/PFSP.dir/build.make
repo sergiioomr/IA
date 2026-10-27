@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sergio/Uni/Tercero/IA/pr02
+CMAKE_SOURCE_DIR = /home/molina/TercerCurso/PrimerCuatri/IA/pr02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sergio/Uni/Tercero/IA/pr02/build
+CMAKE_BINARY_DIR = /home/molina/TercerCurso/PrimerCuatri/IA/pr02/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/PFSP.dir/depend.make
@@ -70,74 +70,74 @@ include CMakeFiles/PFSP.dir/progress.make
 include CMakeFiles/PFSP.dir/flags.make
 
 CMakeFiles/PFSP.dir/src/main.cc.o: CMakeFiles/PFSP.dir/flags.make
-CMakeFiles/PFSP.dir/src/main.cc.o: /home/sergio/Uni/Tercero/IA/pr02/src/main.cc
+CMakeFiles/PFSP.dir/src/main.cc.o: /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/main.cc
 CMakeFiles/PFSP.dir/src/main.cc.o: CMakeFiles/PFSP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PFSP.dir/src/main.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/main.cc.o -MF CMakeFiles/PFSP.dir/src/main.cc.o.d -o CMakeFiles/PFSP.dir/src/main.cc.o -c /home/sergio/Uni/Tercero/IA/pr02/src/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PFSP.dir/src/main.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/main.cc.o -MF CMakeFiles/PFSP.dir/src/main.cc.o.d -o CMakeFiles/PFSP.dir/src/main.cc.o -c /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/main.cc
 
 CMakeFiles/PFSP.dir/src/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PFSP.dir/src/main.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/Uni/Tercero/IA/pr02/src/main.cc > CMakeFiles/PFSP.dir/src/main.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/main.cc > CMakeFiles/PFSP.dir/src/main.cc.i
 
 CMakeFiles/PFSP.dir/src/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PFSP.dir/src/main.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/Uni/Tercero/IA/pr02/src/main.cc -o CMakeFiles/PFSP.dir/src/main.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/main.cc -o CMakeFiles/PFSP.dir/src/main.cc.s
 
 CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o: CMakeFiles/PFSP.dir/flags.make
-CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o: /home/sergio/Uni/Tercero/IA/pr02/src/ProblemPSFP.cc
+CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o: /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/ProblemPSFP.cc
 CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o: CMakeFiles/PFSP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o -MF CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o.d -o CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o -c /home/sergio/Uni/Tercero/IA/pr02/src/ProblemPSFP.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o -MF CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o.d -o CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.o -c /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/ProblemPSFP.cc
 
 CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/Uni/Tercero/IA/pr02/src/ProblemPSFP.cc > CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/ProblemPSFP.cc > CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.i
 
 CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/Uni/Tercero/IA/pr02/src/ProblemPSFP.cc -o CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/ProblemPSFP.cc -o CMakeFiles/PFSP.dir/src/ProblemPSFP.cc.s
 
 CMakeFiles/PFSP.dir/src/algorithms.cc.o: CMakeFiles/PFSP.dir/flags.make
-CMakeFiles/PFSP.dir/src/algorithms.cc.o: /home/sergio/Uni/Tercero/IA/pr02/src/algorithms.cc
+CMakeFiles/PFSP.dir/src/algorithms.cc.o: /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/algorithms.cc
 CMakeFiles/PFSP.dir/src/algorithms.cc.o: CMakeFiles/PFSP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PFSP.dir/src/algorithms.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/algorithms.cc.o -MF CMakeFiles/PFSP.dir/src/algorithms.cc.o.d -o CMakeFiles/PFSP.dir/src/algorithms.cc.o -c /home/sergio/Uni/Tercero/IA/pr02/src/algorithms.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PFSP.dir/src/algorithms.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/algorithms.cc.o -MF CMakeFiles/PFSP.dir/src/algorithms.cc.o.d -o CMakeFiles/PFSP.dir/src/algorithms.cc.o -c /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/algorithms.cc
 
 CMakeFiles/PFSP.dir/src/algorithms.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PFSP.dir/src/algorithms.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/Uni/Tercero/IA/pr02/src/algorithms.cc > CMakeFiles/PFSP.dir/src/algorithms.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/algorithms.cc > CMakeFiles/PFSP.dir/src/algorithms.cc.i
 
 CMakeFiles/PFSP.dir/src/algorithms.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PFSP.dir/src/algorithms.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/Uni/Tercero/IA/pr02/src/algorithms.cc -o CMakeFiles/PFSP.dir/src/algorithms.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/algorithms.cc -o CMakeFiles/PFSP.dir/src/algorithms.cc.s
 
 CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o: CMakeFiles/PFSP.dir/flags.make
-CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o: /home/sergio/Uni/Tercero/IA/pr02/src/GeneticAlgorithm.cc
+CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o: /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/GeneticAlgorithm.cc
 CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o: CMakeFiles/PFSP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o -MF CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o.d -o CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o -c /home/sergio/Uni/Tercero/IA/pr02/src/GeneticAlgorithm.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o -MF CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o.d -o CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o -c /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/GeneticAlgorithm.cc
 
 CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/Uni/Tercero/IA/pr02/src/GeneticAlgorithm.cc > CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/GeneticAlgorithm.cc > CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.i
 
 CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/Uni/Tercero/IA/pr02/src/GeneticAlgorithm.cc -o CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/GeneticAlgorithm.cc -o CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.s
 
 CMakeFiles/PFSP.dir/src/functions.cc.o: CMakeFiles/PFSP.dir/flags.make
-CMakeFiles/PFSP.dir/src/functions.cc.o: /home/sergio/Uni/Tercero/IA/pr02/src/functions.cc
+CMakeFiles/PFSP.dir/src/functions.cc.o: /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/functions.cc
 CMakeFiles/PFSP.dir/src/functions.cc.o: CMakeFiles/PFSP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PFSP.dir/src/functions.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/functions.cc.o -MF CMakeFiles/PFSP.dir/src/functions.cc.o.d -o CMakeFiles/PFSP.dir/src/functions.cc.o -c /home/sergio/Uni/Tercero/IA/pr02/src/functions.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PFSP.dir/src/functions.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PFSP.dir/src/functions.cc.o -MF CMakeFiles/PFSP.dir/src/functions.cc.o.d -o CMakeFiles/PFSP.dir/src/functions.cc.o -c /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/functions.cc
 
 CMakeFiles/PFSP.dir/src/functions.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PFSP.dir/src/functions.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/Uni/Tercero/IA/pr02/src/functions.cc > CMakeFiles/PFSP.dir/src/functions.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/functions.cc > CMakeFiles/PFSP.dir/src/functions.cc.i
 
 CMakeFiles/PFSP.dir/src/functions.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PFSP.dir/src/functions.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/Uni/Tercero/IA/pr02/src/functions.cc -o CMakeFiles/PFSP.dir/src/functions.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/functions.cc -o CMakeFiles/PFSP.dir/src/functions.cc.s
 
 # Object files for target PFSP
 PFSP_OBJECTS = \
@@ -157,7 +157,7 @@ PFSP: CMakeFiles/PFSP.dir/src/GeneticAlgorithm.cc.o
 PFSP: CMakeFiles/PFSP.dir/src/functions.cc.o
 PFSP: CMakeFiles/PFSP.dir/build.make
 PFSP: CMakeFiles/PFSP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable PFSP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable PFSP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PFSP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -169,6 +169,6 @@ CMakeFiles/PFSP.dir/clean:
 .PHONY : CMakeFiles/PFSP.dir/clean
 
 CMakeFiles/PFSP.dir/depend:
-	cd /home/sergio/Uni/Tercero/IA/pr02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sergio/Uni/Tercero/IA/pr02 /home/sergio/Uni/Tercero/IA/pr02 /home/sergio/Uni/Tercero/IA/pr02/build /home/sergio/Uni/Tercero/IA/pr02/build /home/sergio/Uni/Tercero/IA/pr02/build/CMakeFiles/PFSP.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/molina/TercerCurso/PrimerCuatri/IA/pr02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/molina/TercerCurso/PrimerCuatri/IA/pr02 /home/molina/TercerCurso/PrimerCuatri/IA/pr02 /home/molina/TercerCurso/PrimerCuatri/IA/pr02/build /home/molina/TercerCurso/PrimerCuatri/IA/pr02/build /home/molina/TercerCurso/PrimerCuatri/IA/pr02/build/CMakeFiles/PFSP.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/PFSP.dir/depend
 

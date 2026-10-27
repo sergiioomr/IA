@@ -1,0 +1,14 @@
+5036,4037
+10040,4037
+15072,4005
+20107,3999
+25136,3999
+30137,3999
+35153,3999
+40187,3999
+45192,3999
+50002,3999
+----------------- Resultados obtenidos -----------------
+- Algoritmo de búsqueda aleatoria: Makespan = 4441
+- Algoritmo heurístico NEH: Makespan = 4082
+- Algoritmo genético: Makespan = 3999

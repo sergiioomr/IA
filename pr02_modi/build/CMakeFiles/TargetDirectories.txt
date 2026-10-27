@@ -1,0 +1,3 @@
+/home/molina/TercerCurso/PrimerCuatri/IA2/pr02_modi/build/CMakeFiles/PFSP.dir
+/home/molina/TercerCurso/PrimerCuatri/IA2/pr02_modi/build/CMakeFiles/edit_cache.dir
+/home/molina/TercerCurso/PrimerCuatri/IA2/pr02_modi/build/CMakeFiles/rebuild_cache.dir

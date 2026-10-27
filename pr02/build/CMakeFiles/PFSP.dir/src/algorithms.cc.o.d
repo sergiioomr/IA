@@ -1,8 +1,8 @@
 CMakeFiles/PFSP.dir/src/algorithms.cc.o: \
- /home/sergio/Uni/Tercero/IA/pr02/src/algorithms.cc \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/algorithms.cc \
  /usr/include/stdc-predef.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/algorithms.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/ProblemPSFP.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/algorithms.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/ProblemPSFP.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

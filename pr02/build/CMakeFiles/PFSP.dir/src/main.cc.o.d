@@ -1,6 +1,7 @@
 CMakeFiles/PFSP.dir/src/main.cc.o: \
- /home/sergio/Uni/Tercero/IA/pr02/src/main.cc /usr/include/stdc-predef.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/ProblemPSFP.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/main.cc \
+ /usr/include/stdc-predef.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/ProblemPSFP.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -159,8 +160,8 @@ CMakeFiles/PFSP.dir/src/main.cc.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/algorithms.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/ProblemPSFP.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/algorithms.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/ProblemPSFP.h \
  /usr/include/c++/13/random /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -200,7 +201,7 @@ CMakeFiles/PFSP.dir/src/main.cc.o: \
  /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h /usr/include/c++/13/ctime \
  /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/GeneticAlgorithm.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/algorithms.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/GeneticAlgorithm.h \
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/algorithms.h \
  /usr/include/c++/13/cassert /usr/include/assert.h \
- /home/sergio/Uni/Tercero/IA/pr02/src/../include/functions.h
+ /home/molina/TercerCurso/PrimerCuatri/IA/pr02/src/../include/functions.h

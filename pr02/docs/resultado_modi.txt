@@ -1,0 +1,4 @@
+----------------- Resultados obtenidos -----------------
+- Algoritmo de búsqueda aleatoria: Makespan = 1764
+- Algoritmo heurístico NEH: Makespan = 1681
+- Algoritmo genético: Makespan = 1675
